@@ -1,4 +1,4 @@
-baseURL: "https://proof.pub/"
+baseURL: "https://readproof.art/"
 languageCode: "en-us"
 title: "Proof"
 
@@ -17,7 +17,7 @@ markup:
 
 params:
   description: "A weekly AI-generated literary publication"
-  githubURL: "https://github.com/lukasseel/proof"
+  githubURL: "https://github.com/lamentierschweinchen/proof"
 
 menu:
   main:
