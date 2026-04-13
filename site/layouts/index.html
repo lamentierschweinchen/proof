@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $editionSection := site.GetPage "editions" }}
+  {{ if $editionSection }}
+    {{ $allEditions := $editionSection.Pages }}
+    {{ if $allEditions }}
+      {{ $sorted := sort $allEditions ".Params.edition" "desc" }}
+      {{ $latest := index $sorted 0 }}
+      {{ partial "edition-body.html" $latest }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ define "scripts" }}
+  <script src="/js/expand.js"></script>
+{{ end }}

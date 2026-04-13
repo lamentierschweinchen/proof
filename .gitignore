@@ -1,0 +1,22 @@
+# Hugo build output
+site/public/
+site/resources/
+site/.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Node (not used but just in case)
+node_modules/
+
+# Design source files (not part of the publication)
+Design/
+Description/
+Plan/
+Protagonists/

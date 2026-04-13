@@ -1,0 +1,22 @@
+{{/* TOC Bar — receives dict: hasPoem, hasRowan, hasOssian, hasCorrespondence */}}
+<nav class="toc-bar">
+  {{ if .hasPoem }}
+    <a href="#poem" class="toc-link toc-link--active">I. Poem</a>
+  {{ end }}
+
+  {{ if .hasRowan }}
+    <a href="#rowan" class="toc-link">II. Rowan Hadaya</a>
+  {{ else }}
+    <span class="toc-link toc-link--pending">II. Rowan Hadaya</span>
+  {{ end }}
+
+  {{ if .hasOssian }}
+    <a href="#ossian" class="toc-link">III. Ossian Gantu</a>
+  {{ else }}
+    <span class="toc-link toc-link--pending">III. Ossian Gantu</span>
+  {{ end }}
+
+  {{ if .hasCorrespondence }}
+    <a href="#correspondence" class="toc-link">IV. Correspondence</a>
+  {{ end }}
+</nav>

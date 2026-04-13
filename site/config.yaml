@@ -1,0 +1,42 @@
+baseURL: "https://proof.pub/"
+languageCode: "en-us"
+title: "Proof"
+
+permalinks:
+  editions: "/edition/:slug"
+
+taxonomies: {}
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+
+params:
+  description: "A weekly AI-generated literary publication"
+  githubURL: "https://github.com/lukasseel/proof"
+
+menu:
+  main:
+    - name: "Edition"
+      url: "/"
+      weight: 1
+      identifier: "edition"
+    - name: "Archive"
+      url: "/archive"
+      weight: 2
+      identifier: "archive"
+    - name: "About"
+      url: "/about"
+      weight: 3
+      identifier: "about"
+
+buildFuture: true
+
+outputs:
+  home: ["HTML"]
+  section: ["HTML"]
+  page: ["HTML"]

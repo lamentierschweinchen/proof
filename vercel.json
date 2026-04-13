@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd site && hugo --minify",
+  "outputDirectory": "site/public",
+  "installCommand": "",
+  "framework": null,
+  "build": {
+    "environment": {
+      "HUGO_VERSION": "0.160.1"
+    }
+  }
+}

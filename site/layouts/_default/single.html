@@ -1,0 +1,85 @@
+{{ define "main" }}
+{{ if eq .File.LogicalName "about.md" }}
+{{/* About / Colophon page */}}
+<div class="about-page">
+  <section class="about-hero">
+    <div class="about-headline-col">
+      <h1 class="about-title">
+        An inquiry into the <em>mechanization</em> of poetic intent.
+      </h1>
+      <div class="about-intro">
+        {{ .Content }}
+      </div>
+    </div>
+
+    <div class="about-marginalia-col">
+      <div class="about-marginalia-inner">
+        <div>
+          <span class="label-md">Conceived</span>
+          <p style="font-family: var(--font-body); font-size: 1rem; line-height: 1.6;">Lukas Seel<br>2026</p>
+        </div>
+        <div>
+          <span class="label-md">Tradition</span>
+          <p class="tradition-list">Queneau &middot; Gysin &middot; Knowles &middot; Tenney &middot; Clark &middot; RACTER</p>
+        </div>
+      </div>
+    </div>
+
+    {{/* Colophon Grid */}}
+    <div class="colophon-grid">
+      <div class="colophon-section">
+        <h2>I. The Personae</h2>
+        <div>
+          <div style="margin-bottom: 1.5rem;">
+            <span class="colophon-persona-label">Poet</span>
+            <p class="colophon-persona-name">Claude Sonnet</p>
+          </div>
+          <div>
+            <span class="colophon-persona-label">Critic</span>
+            <p class="colophon-persona-name">Claude Opus</p>
+            <p class="colophon-persona-detail" style="margin-top: 0.25rem;">&mdash; Rowan Hadaya</p>
+            <p class="colophon-persona-detail">&mdash; Ossian Gantu</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="colophon-section">
+        <h2>II. Methodology</h2>
+        <p>
+          The publication follows a strict procedural sequence: generation of the primary text, followed by two independent adversarial readings. The resulting interplay between these models constitutes the full work. The lack of human intervention is the primary formal constraint.
+        </p>
+      </div>
+
+      <div class="colophon-section">
+        <h2>III. The Commit</h2>
+        <p>
+          The technical infrastructure is considered an extension of the poetry. The commit history of the repository serves as the definitive record of the publication's evolution &mdash; a digital provenance that is inseparable from the text itself.
+        </p>
+        <a href="{{ .Site.Params.githubURL }}" class="colophon-link">
+          GITHUB REPOSITORY <span class="arrow">&mdash;&gt;</span>
+        </a>
+      </div>
+    </div>
+
+    {{/* Anagrams Note */}}
+    <div class="anagrams-note">
+      <div class="anagrams-note-inner">
+        <h3>A Note on Anagrams</h3>
+        <p>
+          The identities of the critics, <strong>Rowan Hadaya</strong> and <strong>Ossian Gantu</strong>, are derived through the literal rearrangement of Donna Haraway and Susan Sontag, respectively. Ossian also echoes the fabricated ancient Gaelic poet at the center of the 18th century's most famous literary authenticity debate &mdash; a critic of machine-generated poetry named after literature's most famous forgery.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+{{ else }}
+{{/* Generic single page fallback */}}
+<article style="max-width: 48rem; margin: 6rem auto; padding: 0 2rem;">
+  <h1 class="hero-title">{{ .Title }}</h1>
+  <div class="about-intro">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
+{{ end }}

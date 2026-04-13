@@ -1,0 +1,19 @@
+<header class="site-header">
+  <a href="/" class="site-title">Proof</a>
+  <nav class="site-nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ $isActive := false }}
+      {{ if eq .Identifier "edition" }}
+        {{ $isActive = or $currentPage.IsHome (and (eq $currentPage.Section "editions") $currentPage.IsPage) }}
+      {{ else if eq .Identifier "archive" }}
+        {{ $isActive = and (eq $currentPage.Section "editions") (not $currentPage.IsPage) (not $currentPage.IsHome) }}
+      {{ else if eq .Identifier "about" }}
+        {{ if $currentPage.File }}
+          {{ $isActive = eq $currentPage.File.LogicalName "about.md" }}
+        {{ end }}
+      {{ end }}
+      <a href="{{ .URL }}" class="nav-link{{ if $isActive }} nav-link--active{{ end }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</header>

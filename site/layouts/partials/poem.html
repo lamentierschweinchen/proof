@@ -1,0 +1,54 @@
+{{/* Poem partial — receives dict: poem (resource), edition (page), compressed (bool) */}}
+{{ $poem := .poem }}
+{{ $edition := .edition }}
+{{ $compressed := .compressed | default false }}
+
+{{ if $compressed }}
+{{/* Friday state: compressed poem with side marker */}}
+<section id="poem" class="edition-grid poem-section poem-section--compressed">
+  <aside class="poem-aside">
+    <div class="poem-aside-text">Section I</div>
+  </aside>
+  <article class="poem-content-col">
+    <div class="poem-title--compressed">{{ $poem.Title }}</div>
+    <div class="poem-body">
+      {{ $poem.Content }}
+    </div>
+  </article>
+</section>
+
+{{ else }}
+{{/* Monday state: full broadside with left metadata */}}
+<section id="poem" class="edition-grid poem-section">
+  <div class="poem-metadata-col">
+    <div class="poem-metadata-sticky">
+      <span class="label-sm">Monday Edition</span>
+      <div class="poem-metadata-divider"></div>
+      <p class="label-md">
+        {{ $edition.Date.Format "January 2" }}<br>
+        Issue No. {{ printf "%03d" $edition.Params.edition }}
+      </p>
+    </div>
+  </div>
+  <article class="poem-content-col">
+    <header style="margin-bottom: 6rem;">
+      <h1 class="poem-title">{{ $poem.Title }}</h1>
+      <span class="label-md poem-byline">{{ $poem.Params.pseudonym }}</span>
+    </header>
+    <div class="poem-body">
+      {{ $poem.Content }}
+    </div>
+    {{ with $poem.Params.marginalia }}
+    <aside class="poem-marginalia">
+      <p>{{ . }}</p>
+    </aside>
+    {{ end }}
+    <div class="poem-cta">
+      <a href="/archive">
+        <span>EXPLORE THE ARCHIVE</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </article>
+</section>
+{{ end }}

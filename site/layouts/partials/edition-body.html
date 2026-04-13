@@ -1,0 +1,62 @@
+{{/* Edition body — receives the edition page (leaf bundle). Shared between home and single edition. */}}
+{{ $poem := .Resources.GetMatch "poem.md" }}
+{{ $rowan := .Resources.GetMatch "rowan.md" }}
+{{ $ossian := .Resources.GetMatch "ossian.md" }}
+{{ $correspondence := .Resources.Match "correspondence-*.md" }}
+
+{{ $hasPoem := $poem }}
+{{ $hasRowan := $rowan }}
+{{ $hasOssian := $ossian }}
+{{ $hasCorrespondence := gt (len $correspondence) 0 }}
+
+{{/* Determine state */}}
+{{ $isFriday := and $hasPoem $hasRowan $hasOssian }}
+{{ $isWednesday := and $hasPoem $hasRowan (not $hasOssian) }}
+{{ $isMonday := and $hasPoem (not $hasRowan) (not $hasOssian) }}
+
+{{/* TOC Bar */}}
+{{ partial "toc-bar.html" (dict
+  "hasPoem" $hasPoem
+  "hasRowan" $hasRowan
+  "hasOssian" $hasOssian
+  "hasCorrespondence" $hasCorrespondence
+) }}
+
+<div class="edition-main">
+  {{/* Hero — only in Friday state */}}
+  {{ if $isFriday }}
+  <header class="edition-grid edition-hero">
+    <div class="hero-content">
+      <span class="hero-volume">Edition {{ printf "%03d" .Params.edition }}</span>
+      <h1 class="hero-title">The Friday Edition</h1>
+      {{ with .Params.description }}
+      <p class="hero-subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+  {{ end }}
+
+  {{/* I. Poem */}}
+  {{ if $hasPoem }}
+    {{ if $isFriday }}
+      {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" true) }}
+    {{ else }}
+      {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" false) }}
+    {{ end }}
+  {{ end }}
+
+  {{/* II. Rowan Hadaya */}}
+  {{ if $hasRowan }}
+    {{ partial "essay.html" (dict "essay" $rowan "number" "II" "id" "rowan") }}
+  {{ end }}
+
+  {{/* III. Ossian Gantu */}}
+  {{ if $hasOssian }}
+    {{ partial "essay.html" (dict "essay" $ossian "number" "III" "id" "ossian") }}
+  {{ end }}
+
+  {{/* IV. Correspondence */}}
+  {{ if $hasCorrespondence }}
+    {{ partial "correspondence.html" $correspondence }}
+  {{ end }}
+</div>

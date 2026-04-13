@@ -1,0 +1,16 @@
+{{/* Correspondence partial — receives a slice of page resources */}}
+<section id="correspondence" class="edition-grid correspondence-section">
+  <div class="correspondence-col">
+    <div class="correspondence-header">IV. Correspondence</div>
+    {{ range sort . ".Params.date" "asc" }}
+    <div class="letter">
+      <p class="letter-date">
+        {{ .Date.Format "2 January" }}{{ with .Params.location }}, {{ . }}{{ end }}
+      </p>
+      <div class="letter-body">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>

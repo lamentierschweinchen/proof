@@ -1,0 +1,28 @@
+{{/* Essay partial — receives dict: essay (resource), number (string "II" or "III"), id (string) */}}
+{{ $essay := .essay }}
+{{ $number := .number }}
+{{ $id := .id }}
+
+<section id="{{ $id }}" class="edition-grid essay-section">
+  <div class="essay-content-col">
+    <div class="essay-header">
+      <span class="label-md" style="opacity: 0.6;">Essay</span>
+    </div>
+    <h2 class="essay-title">{{ $essay.Title }}</h2>
+    <div class="essay-body" data-expandable>
+      <div class="essay-body-inner">
+        {{ $essay.Content }}
+      </div>
+      <div class="paper-reveal"></div>
+    </div>
+    <button class="expand-trigger" data-expand-btn>
+      <span class="expand-text">CONTINUE READING</span>
+      <span class="expand-arrow">&mdash;&gt;</span>
+    </button>
+  </div>
+  {{ with $essay.Params.marginalia }}
+  <aside class="essay-marginalia-col">
+    <div class="essay-marginalia">{{ . }}</div>
+  </aside>
+  {{ end }}
+</section>
