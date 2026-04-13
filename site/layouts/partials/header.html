@@ -1,5 +1,16 @@
 <header class="site-header">
-  <a href="/" class="site-title">Proof</a>
+  <a href="/" class="site-title" aria-label="Proof">
+    <svg class="site-wordmark" viewBox="0 0 66 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <text x="0" y="21"
+        font-family="'Newsreader', serif"
+        font-size="24"
+        font-weight="400"
+        letter-spacing="-0.36"
+        fill="currentColor"
+        style="font-variation-settings: 'opsz' 24, 'wght' 460"
+      >Proof</text>
+    </svg>
+  </a>
   <nav class="site-nav">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}

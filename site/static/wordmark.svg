@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 24" role="img" aria-label="Proof">
+  <!--
+    Proof wordmark — Newsreader variable font
+    Font settings: opsz 24 (display optical size), wght 460 (slightly above regular 400)
+    The opsz axis shifts letterform proportions for display vs. text use — felt, not immediately seen.
+    Note: requires Newsreader loaded from Google Fonts. For truly standalone use, outline paths in a vector editor.
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&display=swap');
+    </style>
+  </defs>
+  <text
+    x="0"
+    y="21"
+    font-family="'Newsreader', serif"
+    font-size="24"
+    font-weight="400"
+    letter-spacing="-0.36"
+    fill="#1b1c19"
+    style="font-variation-settings: 'opsz' 24, 'wght' 460"
+  >Proof</text>
+</svg>

@@ -97,10 +97,16 @@ ul, ol {
 }
 
 .site-title {
-  font-family: var(--font-headline);
   font-size: 1.5rem;
-  font-weight: 400;
   color: var(--color-ink);
+  line-height: 1;
+}
+
+.site-wordmark {
+  display: block;
+  height: 1em;
+  width: auto;
+  overflow: visible;
 }
 
 .site-nav {
@@ -598,9 +604,8 @@ ul, ol {
 }
 
 .footer-title {
-  font-family: var(--font-headline);
   font-size: 1.25rem;
-  font-style: italic;
+  line-height: 1;
 }
 
 .footer-nav {

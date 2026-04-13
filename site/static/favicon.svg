@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#1b1c19"/>
+  <!-- P letterform in off-white -->
+  <!-- Stem body -->
+  <rect x="6" y="4" width="5" height="23" fill="#fbf9f4"/>
+  <!-- Top serif -->
+  <rect x="3" y="4" width="11" height="2" fill="#fbf9f4"/>
+  <!-- Bottom serif -->
+  <rect x="3" y="25" width="11" height="2" fill="#fbf9f4"/>
+  <!-- Bowl: outer semi-ellipse minus inner semi-ellipse, fill-rule evenodd creates counter -->
+  <path fill-rule="evenodd" fill="#fbf9f4"
+    d="M 11 6 A 14 7.5 0 0 0 11 21 Z
+       M 11 9 A 9 4.5 0 0 0 11 18 Z"/>
+</svg>
