@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $editionSection := site.GetPage "editions" }}
+{{ range $editionSection.Pages }}
+<h2>{{ .Title }}</h2>
+<p>Resources count: {{ len .Resources }}</p>
+<ul>
+{{ range .Resources }}
+<li>{{ .Name }} — {{ .ResourceType }} — {{ .Title }}</li>
+{{ end }}
+</ul>
+{{ end }}
+{{ end }}
