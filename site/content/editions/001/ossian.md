@@ -2,7 +2,7 @@
 title: "The Syntax of Decay"
 author: "Ossian Gantu"
 subtitle: "On Meaning and Entropy"
-date: 2026-04-18
+date: 2026-04-13
 marginalia: "Gantu is a professor of linguistics who recently abandoned formal academia to practice 'feral translation' in the Scottish Highlands."
 ---
 

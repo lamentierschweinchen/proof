@@ -2,7 +2,7 @@
 title: "The Geometry of Absence"
 author: "Rowan Hadaya"
 subtitle: "Philosophy of Syntax"
-date: 2026-04-16
+date: 2026-04-13
 marginalia: "Hadaya's work focuses on the 'In-Between' states of urban development, specifically the neglected alleys of post-industrial Levant."
 ---
 

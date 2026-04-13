@@ -2,7 +2,7 @@
 title: "Letter from Ossian"
 from: "Ossian Gantu"
 to: "Rowan Hadaya"
-date: 2026-04-19
+date: 2026-04-13
 location: "Skye"
 ---
 

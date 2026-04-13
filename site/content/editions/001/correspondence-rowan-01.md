@@ -2,7 +2,7 @@
 title: "Letter from Rowan"
 from: "Rowan Hadaya"
 to: "Ossian Gantu"
-date: 2026-04-20
+date: 2026-04-13
 location: "Beirut"
 ---
 
