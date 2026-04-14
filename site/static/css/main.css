@@ -148,6 +148,14 @@ ul, ol {
   position: sticky;
   top: 0;
   z-index: 40;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.toc-bar.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .toc-link {
@@ -596,21 +604,29 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   padding: 4rem 2rem;
   margin-top: 6rem;
   background-color: var(--color-surface-low);
 }
 
-.footer-title {
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
 .footer-nav {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-title {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.footer-dot {
+  font-family: var(--font-label);
+  font-size: 10px;
+  color: rgba(27, 28, 25, 0.3);
 }
 
 .footer-link {
@@ -624,6 +640,14 @@ ul, ol {
 
 .footer-link:hover {
   color: var(--color-ink);
+}
+
+.footer-credit {
+  font-family: var(--font-label);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(27, 28, 25, 0.4);
 }
 
 
@@ -835,41 +859,6 @@ ul, ol {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
-  .about-marginalia-col {
-    grid-column: 10 / 13;
-    padding-top: 1rem;
-  }
-}
-
-.about-marginalia-inner {
-  border-left: 1px solid rgba(198, 198, 198, 0.1);
-  padding-left: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.about-marginalia-inner .label-md {
-  display: block;
-  opacity: 0.6;
-  margin-bottom: 0.5rem;
-}
-
-.about-marginalia-inner .tradition-list {
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-style: italic;
-  line-height: 1.6;
-  opacity: 0.8;
-}
-
-@media (max-width: 767px) {
-  .about-marginalia-col {
-    display: none;
-  }
-}
-
 /* Colophon Grid */
 .colophon-grid {
   grid-column: 1 / -1;
@@ -908,6 +897,18 @@ ul, ol {
   opacity: 0.8;
 }
 
+.colophon-characters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.colophon-character {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .colophon-persona-label {
   font-family: var(--font-label);
   font-size: var(--text-label-sm);
@@ -917,16 +918,11 @@ ul, ol {
   display: block;
 }
 
-.colophon-persona-name {
-  font-family: var(--font-body);
-  font-size: var(--text-body-essay);
-}
-
-.colophon-persona-detail {
+.colophon-persona-desc {
   font-family: var(--font-body);
   font-size: 0.875rem;
-  font-style: italic;
-  opacity: 0.7;
+  line-height: 1.8;
+  opacity: 0.8;
 }
 
 .colophon-link {
@@ -937,8 +933,6 @@ ul, ol {
 }
 
 .colophon-link .arrow {
-  font-family: var(--font-label);
-  font-size: var(--text-label-md);
   margin-left: 0.25rem;
   display: inline-block;
   transition: transform 300ms;
@@ -946,39 +940,6 @@ ul, ol {
 
 .colophon-link:hover .arrow {
   transform: translateX(4px);
-}
-
-/* Anagrams Note */
-.anagrams-note {
-  margin-top: 8rem;
-}
-
-@media (min-width: 768px) {
-  .anagrams-note {
-    grid-column: 1 / 9;
-  }
-}
-
-.anagrams-note-inner {
-  background-color: var(--color-surface-low);
-  padding: 3rem;
-}
-
-.anagrams-note-inner h3 {
-  font-family: var(--font-headline);
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-}
-
-.anagrams-note-inner p {
-  font-family: var(--font-body);
-  font-size: var(--text-body-essay);
-  line-height: 1.8;
-}
-
-.anagrams-note-inner strong {
-  font-weight: 700;
 }
 
 

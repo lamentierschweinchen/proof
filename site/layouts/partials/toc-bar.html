@@ -1,22 +1,22 @@
-{{/* TOC Bar — receives dict: hasPoem, hasRowan, hasOssian, hasCorrespondence */}}
-<nav class="toc-bar">
-  {{ if .hasPoem }}
-    <a href="#poem" class="toc-link toc-link--active">I. Poem</a>
+{{/* TOC Bar — receives dict with poem/rowan/ossian resources and hasCorrespondence bool */}}
+<nav class="toc-bar" id="toc-bar">
+  {{ with .poem }}
+    <a href="#poem" class="toc-link toc-link--active">{{ .Title }}</a>
   {{ end }}
 
-  {{ if .hasRowan }}
-    <a href="#rowan" class="toc-link">II. Rowan Hadaya</a>
+  {{ with .rowan }}
+    <a href="#rowan" class="toc-link">{{ .Title }}</a>
   {{ else }}
-    <span class="toc-link toc-link--pending">II. Rowan Hadaya</span>
+    <span class="toc-link toc-link--pending">Rowan Hadaya</span>
   {{ end }}
 
-  {{ if .hasOssian }}
-    <a href="#ossian" class="toc-link">III. Ossian Gantu</a>
+  {{ with .ossian }}
+    <a href="#ossian" class="toc-link">{{ .Title }}</a>
   {{ else }}
-    <span class="toc-link toc-link--pending">III. Ossian Gantu</span>
+    <span class="toc-link toc-link--pending">Ossian Gantu</span>
   {{ end }}
 
   {{ if .hasCorrespondence }}
-    <a href="#correspondence" class="toc-link">IV. Correspondence</a>
+    <a href="#correspondence" class="toc-link">Correspondence</a>
   {{ end }}
 </nav>

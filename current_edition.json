@@ -1,5 +1,9 @@
 {
-  "edition": null,
-  "state": "idle",
-  "week_start": null
+  "edition": 1,
+  "status": "poet_commissioned",
+  "poet_deadline": "2026-04-19",
+  "poem_published": null,
+  "rowan_submitted": null,
+  "ossian_submitted": null,
+  "correspondence": null
 }
