@@ -149,11 +149,10 @@ ul, ol {
 /* --- TOC Bar --- */
 .toc-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 0.75rem 1.5rem;
   width: 100%;
+  padding: 0.75rem 0;
   background-color: var(--color-surface-low);
   border-top: 1px solid rgba(27, 28, 25, 0.05);
   border-bottom: 1px solid rgba(27, 28, 25, 0.05);
@@ -172,8 +171,29 @@ ul, ol {
   pointer-events: auto;
 }
 
+/* Inner wrapper mirrors .edition-main so the home mark and the TOC links
+   sit inside the same column grid as the edition body. */
+.toc-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: var(--max-content);
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .toc-bar-inner {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+  }
+}
+
 /* Home mark sits on the left of the TOC bar — a way back up. Full wordmark
-   on desktop, compact P glyph on mobile. */
+   on desktop, compact P glyph on mobile. On desktop it lives in grid-column
+   2, aligned with where the essay text begins. */
 .toc-bar-home {
   display: inline-flex;
   align-items: center;
@@ -188,6 +208,13 @@ ul, ol {
   opacity: 0.6;
 }
 
+@media (min-width: 768px) {
+  .toc-bar-home {
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+}
+
 .toc-bar-home__wordmark {
   display: block;
   height: 1em;
@@ -200,10 +227,22 @@ ul, ol {
   width: auto;
 }
 
+/* Mobile: left-aligned flex row next to the mark, not right-bound.
+   Desktop: spans the rest of the grid starting where the essay body starts. */
 .toc-bar-links {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .toc-bar-links {
+    grid-column: 3 / -1;
+    justify-self: end;
+    gap: 2.5rem;
+    flex-wrap: nowrap;
+  }
 }
 
 .toc-link {
@@ -999,10 +1038,8 @@ ul, ol {
     gap: 1.5rem;
   }
 
-  .toc-bar {
-    gap: 1rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .toc-bar-inner {
+    gap: 1.25rem;
   }
 
   .toc-bar-links {
