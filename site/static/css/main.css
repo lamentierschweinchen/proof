@@ -190,11 +190,6 @@ ul, ol {
   font-weight: 700;
 }
 
-.toc-link--pending {
-  opacity: 0.3;
-  cursor: default;
-}
-
 /* Two labels per toc-link: full-title for desktop, short label for mobile.
    Default is desktop — show the full title, hide the short label. The
    mobile media query below flips it. */
@@ -390,11 +385,25 @@ ul, ol {
   max-width: 66%;
 }
 
-.poem-cta {
-  margin-top: 6rem;
+/* Explore the Archive — anchors the end of the latest contribution. Lives
+   inside the edition grid so its column placement stays consistent with the
+   body text of whatever section it follows. */
+.edition-explore {
+  margin-top: 2rem;
+  margin-bottom: 12rem;
 }
 
-.poem-cta a {
+.edition-explore-inner {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+  .edition-explore-inner {
+    grid-column: 4 / 10;
+  }
+}
+
+.edition-explore a {
   font-family: var(--font-body);
   font-size: var(--text-body-essay);
   border-bottom: 1px solid rgba(27, 28, 25, 0.1);
@@ -405,17 +414,17 @@ ul, ol {
   transition: border-color 300ms;
 }
 
-.poem-cta a:hover {
+.edition-explore a:hover {
   border-color: var(--color-body);
 }
 
-.poem-cta .arrow {
+.edition-explore .arrow {
   font-family: var(--font-label);
   font-size: var(--text-label-md);
   transition: transform 300ms;
 }
 
-.poem-cta a:hover .arrow {
+.edition-explore a:hover .arrow {
   transform: translateX(4px);
 }
 
@@ -806,23 +815,6 @@ ul, ol {
 .geo-4 ~ .archive-entry-content .archive-piece-link { font-size: 1rem; }
 .geo-5 ~ .archive-entry-content .archive-piece-link { font-size: 0.875rem; }
 .geo-6 ~ .archive-entry-content .archive-piece-link { font-size: 0.75rem; }
-
-.archive-marginalia {
-  margin-top: 12rem;
-  padding-top: 6rem;
-  border-top: 1px solid rgba(198, 198, 198, 0.1);
-  text-align: right;
-  opacity: 0.4;
-}
-
-.archive-marginalia p {
-  font-family: var(--font-headline);
-  font-style: italic;
-  font-size: 0.875rem;
-  max-width: 20rem;
-  margin-left: auto;
-}
-
 
 /* --- About Page --- */
 .about-page {

@@ -29,10 +29,10 @@ menu:
       url: "/archive"
       weight: 2
       identifier: "archive"
-    - name: "About"
-      url: "/about"
+    - name: "Colophon"
+      url: "/colophon"
       weight: 3
-      identifier: "about"
+      identifier: "colophon"
 
 buildFuture: true
 

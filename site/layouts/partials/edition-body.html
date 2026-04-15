@@ -1,4 +1,8 @@
-{{/* Edition body — receives the edition page (leaf bundle). Shared between home and single edition. */}}
+{{/* Edition body — receives the edition page (leaf bundle). Shared between home and single edition.
+     Additive: sections accrete across the week. The poem stands alone on Monday;
+     on Wednesday Rowan is added; on Friday Ossian; on the weekend, correspondence.
+     The poem compresses as soon as any companion exists, and the "Explore the
+     Archive" CTA always anchors the end of the latest contribution. */}}
 {{ $poem := .Resources.GetMatch "poem.md" }}
 {{ $rowan := .Resources.GetMatch "rowan.md" }}
 {{ $ossian := .Resources.GetMatch "ossian.md" }}
@@ -9,20 +13,29 @@
 {{ $hasOssian := $ossian }}
 {{ $hasCorrespondence := gt (len $correspondence) 0 }}
 
-{{/* Determine state */}}
-{{ $isFriday := and $hasPoem $hasRowan $hasOssian }}
+{{/* Any companion piece means the poem compresses and the edition masthead shows. */}}
+{{ $hasCompanions := or $hasRowan $hasOssian $hasCorrespondence }}
 
-{{/* TOC Bar — pass resources for titles */}}
-{{ partial "toc-bar.html" (dict
-  "poem" $poem
-  "rowan" $rowan
-  "ossian" $ossian
-  "hasCorrespondence" $hasCorrespondence
-) }}
+{{/* Count rendered pieces to decide whether the TOC bar is meaningful. */}}
+{{ $sectionCount := 0 }}
+{{ if $hasPoem }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
+{{ if $hasRowan }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
+{{ if $hasOssian }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
+{{ if $hasCorrespondence }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
+
+{{/* TOC Bar — only render when there are at least two pieces to move between. */}}
+{{ if ge $sectionCount 2 }}
+  {{ partial "toc-bar.html" (dict
+    "poem" $poem
+    "rowan" $rowan
+    "ossian" $ossian
+    "hasCorrespondence" $hasCorrespondence
+  ) }}
+{{ end }}
 
 <div class="edition-main">
-  {{/* Hero — only in Friday state */}}
-  {{ if $isFriday }}
+  {{/* Hero — shows whenever companions exist (Wednesday onward). */}}
+  {{ if $hasCompanions }}
   <header class="edition-grid edition-hero">
     <div class="hero-content">
       <span class="hero-volume">Edition {{ printf "%03d" .Params.edition }} &middot; {{ .Date.Format "January 2, 2006" }}</span>
@@ -32,11 +45,7 @@
 
   {{/* I. Poem */}}
   {{ if $hasPoem }}
-    {{ if $isFriday }}
-      {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" true) }}
-    {{ else }}
-      {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" false) }}
-    {{ end }}
+    {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" $hasCompanions) }}
   {{ end }}
 
   {{/* II. Rowan Hadaya */}}
@@ -52,5 +61,17 @@
   {{/* IV. Correspondence */}}
   {{ if $hasCorrespondence }}
     {{ partial "correspondence.html" $correspondence }}
+  {{ end }}
+
+  {{/* Explore the Archive — always anchors the end of the latest contribution. */}}
+  {{ if $hasPoem }}
+  <div class="edition-grid edition-explore">
+    <div class="edition-explore-inner">
+      <a href="/archive">
+        <span>EXPLORE THE ARCHIVE</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
   {{ end }}
 </div>

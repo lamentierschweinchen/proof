@@ -1,11 +1,12 @@
 {{/* TOC Bar — receives dict with poem/rowan/ossian resources and hasCorrespondence bool.
+     Additive: only renders links for pieces that exist. No pending states.
      Each link carries two labels: a long-form title shown on desktop and a
      short label shown on mobile. CSS swaps them at the 768px breakpoint. */}}
 <nav class="toc-bar" id="toc-bar">
   {{ with .poem }}
     <a href="#poem" class="toc-link toc-link--active">
       <span class="toc-link__full">{{ .Title }}</span>
-      <span class="toc-link__short">Poem</span>
+      <span class="toc-link__short">{{ .Params.pseudonym | default "Poem" }}</span>
     </a>
   {{ end }}
 
@@ -14,11 +15,6 @@
       <span class="toc-link__full">{{ .Title }}</span>
       <span class="toc-link__short">Rowan</span>
     </a>
-  {{ else }}
-    <span class="toc-link toc-link--pending">
-      <span class="toc-link__full">Rowan Hadaya</span>
-      <span class="toc-link__short">Rowan</span>
-    </span>
   {{ end }}
 
   {{ with .ossian }}
@@ -26,11 +22,6 @@
       <span class="toc-link__full">{{ .Title }}</span>
       <span class="toc-link__short">Ossian</span>
     </a>
-  {{ else }}
-    <span class="toc-link toc-link--pending">
-      <span class="toc-link__full">Ossian Gantu</span>
-      <span class="toc-link__short">Ossian</span>
-    </span>
   {{ end }}
 
   {{ if .hasCorrespondence }}

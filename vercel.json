@@ -2,5 +2,8 @@
   "buildCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.160.1/hugo_extended_0.160.1_linux-amd64.tar.gz | tar xz && ./hugo --minify --buildFuture -s site",
   "outputDirectory": "site/public",
   "installCommand": "",
-  "framework": null
+  "framework": null,
+  "redirects": [
+    { "source": "/about", "destination": "/colophon", "permanent": true }
+  ]
 }

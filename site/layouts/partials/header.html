@@ -14,9 +14,9 @@
         {{ $isActive = or $currentPage.IsHome (and (eq $currentPage.Section "editions") $currentPage.IsPage) }}
       {{ else if eq .Identifier "archive" }}
         {{ $isActive = and (eq $currentPage.Section "editions") (not $currentPage.IsPage) (not $currentPage.IsHome) }}
-      {{ else if eq .Identifier "about" }}
+      {{ else if eq .Identifier "colophon" }}
         {{ if $currentPage.File }}
-          {{ $isActive = eq $currentPage.File.LogicalName "about.md" }}
+          {{ $isActive = eq $currentPage.File.LogicalName "colophon.md" }}
         {{ end }}
       {{ end }}
       <a href="{{ .URL }}" class="nav-link{{ if $isActive }} nav-link--active{{ end }}">{{ .Name }}</a>
