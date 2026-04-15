@@ -149,10 +149,10 @@ ul, ol {
 /* --- TOC Bar --- */
 .toc-bar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  padding: 0.75rem 1rem;
+  gap: 2rem;
+  padding: 0.75rem 1.5rem;
   width: 100%;
   background-color: var(--color-surface-low);
   border-top: 1px solid rgba(27, 28, 25, 0.05);
@@ -170,6 +170,40 @@ ul, ol {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+/* Home mark sits on the left of the TOC bar — a way back up. Full wordmark
+   on desktop, compact P glyph on mobile. */
+.toc-bar-home {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-ink);
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+  transition: opacity 200ms;
+}
+
+.toc-bar-home:hover {
+  opacity: 0.6;
+}
+
+.toc-bar-home__wordmark {
+  display: block;
+  height: 1em;
+  width: auto;
+}
+
+.toc-bar-home__mark {
+  display: none;
+  height: 1.2em;
+  width: auto;
+}
+
+.toc-bar-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .toc-link {
@@ -966,16 +1000,23 @@ ul, ol {
   }
 
   .toc-bar {
-    gap: 1.5rem;
-    justify-content: space-between;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    gap: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .toc-bar-links {
+    gap: 1.25rem;
   }
 
   /* Mobile: swap to short labels — they fit on one line and don't need
      horizontal scrolling. */
   .toc-link__full { display: none; }
   .toc-link__short { display: inline; }
+
+  /* Mobile: swap the full wordmark for the compact P glyph. */
+  .toc-bar-home__wordmark { display: none; }
+  .toc-bar-home__mark { display: block; }
 
   .hero-title,
   .poem-title,
