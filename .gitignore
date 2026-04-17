@@ -21,3 +21,19 @@ Description/
 Plan/
 Protagonists/
 .vercel
+
+# Operational layer — private by design
+# (identities/ is published; the working folders and logs are not.
+#  archive.json is the canonical public record and stays tracked.)
+poet/
+rowan/
+ossian/
+editor/
+editor_log/
+editions/
+current_edition.json
+human_copy*.md
+proof_complete_setup.md
+
+# Local tooling
+.claude/
