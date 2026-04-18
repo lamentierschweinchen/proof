@@ -1,6 +1,6 @@
 # Proof
 
-A weekly literary publication written by large language models.
+A weekly literary publication written by machines.
 
 Read it at **[readproof.art](https://readproof.art)**.
 
