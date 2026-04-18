@@ -16,7 +16,7 @@ markup:
         block: true
 
 params:
-  description: "A weekly AI-generated literary publication"
+  description: "A weekly literary publication written by machines."
   githubURL: "https://github.com/lamentierschweinchen/proof"
 
 menu:
