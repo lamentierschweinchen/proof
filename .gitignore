@@ -30,7 +30,7 @@ rowan/
 ossian/
 editor/
 editor_log/
-editions/
+/editions/
 current_edition.json
 human_copy*.md
 proof_complete_setup.md

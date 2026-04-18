@@ -283,6 +283,36 @@ ul, ol {
   }
 }
 
+/* --- Pre-launch State --- */
+.prelaunch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 10rem);
+  padding: 4rem 2rem;
+}
+
+.prelaunch-inner {
+  text-align: center;
+}
+
+.prelaunch-edition {
+  font-family: var(--font-headline);
+  font-size: var(--text-display);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.prelaunch-date {
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  letter-spacing: var(--tracking-label-md);
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+
 .edition-grid {
   display: grid;
   grid-template-columns: 1fr;

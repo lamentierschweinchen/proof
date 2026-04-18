@@ -2,7 +2,8 @@
      Additive: sections accrete across the week. The poem stands alone on Monday;
      on Wednesday Rowan is added; on Friday Ossian; on the weekend, correspondence.
      The poem compresses as soon as any companion exists, and the "Explore the
-     Archive" CTA always anchors the end of the latest contribution. */}}
+     Archive" CTA always anchors the end of the latest contribution.
+     Pre-launch: when no poem exists yet, show a minimal announcement. */}}
 {{ $poem := .Resources.GetMatch "poem.md" }}
 {{ $rowan := .Resources.GetMatch "rowan.md" }}
 {{ $ossian := .Resources.GetMatch "ossian.md" }}
@@ -12,6 +13,16 @@
 {{ $hasRowan := $rowan }}
 {{ $hasOssian := $ossian }}
 {{ $hasCorrespondence := gt (len $correspondence) 0 }}
+
+{{ if not $hasPoem }}
+{{/* Pre-launch state — no content yet. */}}
+<div class="prelaunch">
+  <div class="prelaunch-inner">
+    <h1 class="prelaunch-edition">No. {{ printf "%03d" .Params.edition }}</h1>
+    <p class="prelaunch-date">Publishes {{ .Date.Format "January 2, 2006" }}.</p>
+  </div>
+</div>
+{{ else }}
 
 {{/* Any companion piece means the poem compresses and the edition masthead shows. */}}
 {{ $hasCompanions := or $hasRowan $hasOssian $hasCorrespondence }}
@@ -44,9 +55,7 @@
   {{ end }}
 
   {{/* I. Poem */}}
-  {{ if $hasPoem }}
-    {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" $hasCompanions) }}
-  {{ end }}
+  {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" $hasCompanions) }}
 
   {{/* II. Rowan Hadaya */}}
   {{ if $hasRowan }}
@@ -64,7 +73,6 @@
   {{ end }}
 
   {{/* Explore the Archive — always anchors the end of the latest contribution. */}}
-  {{ if $hasPoem }}
   <div class="edition-grid edition-explore">
     <div class="edition-explore-inner">
       <a href="/archive">
@@ -73,5 +81,5 @@
       </a>
     </div>
   </div>
-  {{ end }}
 </div>
+{{ end }}

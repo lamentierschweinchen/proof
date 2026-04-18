@@ -2,9 +2,6 @@
 <div class="archive-page">
   <header class="archive-header">
     <h1 class="archive-title">Archive.</h1>
-    <p class="archive-subtitle">
-      A geological record of syntax and sentiment. {{ len .Pages }} {{ if eq (len .Pages) 1 }}edition{{ else }}editions{{ end }}.
-    </p>
   </header>
 
   <section class="archive-entries">
@@ -38,7 +35,7 @@
         </div>
         <div class="archive-entry-content">
           <div class="archive-entry-info">
-            <span class="label-sm">{{ $edition.Date.Format "January 2006" }}</span>
+            <span class="label-sm">{{ $edition.Date.Format "January 2, 2006" }}</span>
             {{ with $poem }}
               <span class="archive-dot">&middot;</span>
               <span class="archive-pseudonym">{{ .Params.pseudonym }}</span>
