@@ -1,7 +1,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}Proof{{ else }}{{ .Title }} — Proof{{ end }}</title>
-<meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+{{ $desc := .Params.description | default .Site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}Proof{{ else }}{{ .Title }} — Proof{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}social-preview.png">
+<meta property="og:site_name" content="Proof">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}Proof{{ else }}{{ .Title }} — Proof{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}social-preview.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&display=swap" rel="stylesheet">
