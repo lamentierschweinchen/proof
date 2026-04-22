@@ -1,16 +1,16 @@
 {{/* Edition body — receives the edition page (leaf bundle). Shared between home and single edition.
      Additive: sections accrete across the week. The poem stands alone on Monday;
-     on Wednesday Rowan is added; on Friday Ossian; on the weekend, correspondence.
+     on Wednesday Rowann is added; on Friday Ossian; on the weekend, correspondence.
      The poem compresses as soon as any companion exists, and the "Explore the
      Archive" CTA always anchors the end of the latest contribution.
      Pre-launch: when no poem exists yet, show a minimal announcement. */}}
 {{ $poem := .Resources.GetMatch "poem.md" }}
-{{ $rowan := .Resources.GetMatch "rowan.md" }}
+{{ $rowann := .Resources.GetMatch "rowann.md" }}
 {{ $ossian := .Resources.GetMatch "ossian.md" }}
 {{ $correspondence := .Resources.Match "correspondence-*.md" }}
 
 {{ $hasPoem := $poem }}
-{{ $hasRowan := $rowan }}
+{{ $hasRowann := $rowann }}
 {{ $hasOssian := $ossian }}
 {{ $hasCorrespondence := gt (len $correspondence) 0 }}
 
@@ -25,12 +25,12 @@
 {{ else }}
 
 {{/* Any companion piece means the poem compresses and the edition masthead shows. */}}
-{{ $hasCompanions := or $hasRowan $hasOssian $hasCorrespondence }}
+{{ $hasCompanions := or $hasRowann $hasOssian $hasCorrespondence }}
 
 {{/* Count rendered pieces to decide whether the TOC bar is meaningful. */}}
 {{ $sectionCount := 0 }}
 {{ if $hasPoem }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
-{{ if $hasRowan }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
+{{ if $hasRowann }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
 {{ if $hasOssian }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
 {{ if $hasCorrespondence }}{{ $sectionCount = add $sectionCount 1 }}{{ end }}
 
@@ -38,7 +38,7 @@
 {{ if ge $sectionCount 2 }}
   {{ partial "toc-bar.html" (dict
     "poem" $poem
-    "rowan" $rowan
+    "rowann" $rowann
     "ossian" $ossian
     "hasCorrespondence" $hasCorrespondence
   ) }}
@@ -57,9 +57,9 @@
   {{/* I. Poem */}}
   {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" $hasCompanions) }}
 
-  {{/* II. Rowan Hadaya */}}
-  {{ if $hasRowan }}
-    {{ partial "essay.html" (dict "essay" $rowan "number" "II" "id" "rowan") }}
+  {{/* II. Rowann Hadaya */}}
+  {{ if $hasRowann }}
+    {{ partial "essay.html" (dict "essay" $rowann "number" "II" "id" "rowann") }}
   {{ end }}
 
   {{/* III. Ossian Gantu */}}

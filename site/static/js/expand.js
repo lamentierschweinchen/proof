@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // TOC bar: mark the section currently in view as active.
   if (tocBar) {
-    var sectionIds = ['poem', 'rowan', 'ossian', 'correspondence'];
+    var sectionIds = ['poem', 'rowann', 'ossian', 'correspondence'];
     var sections = sectionIds
       .map(function (id) { return document.getElementById(id); })
       .filter(Boolean);

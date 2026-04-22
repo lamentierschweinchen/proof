@@ -16,7 +16,7 @@
       {{ if gt $i 20 }}{{ $tier = 6 }}{{ end }}
 
       {{ $poem := $edition.Resources.GetMatch "poem.md" }}
-      {{ $rowan := $edition.Resources.GetMatch "rowan.md" }}
+      {{ $rowann := $edition.Resources.GetMatch "rowann.md" }}
       {{ $ossian := $edition.Resources.GetMatch "ossian.md" }}
 
       {{/* Tier labels */}}
@@ -45,8 +45,8 @@
             {{ with $poem }}
               <li><a href="{{ $edition.Permalink }}" class="archive-piece-link">{{ .Title }}</a></li>
             {{ end }}
-            {{ with $rowan }}
-              <li><a href="{{ $edition.Permalink }}#rowan" class="archive-piece-link">{{ .Title }}</a></li>
+            {{ with $rowann }}
+              <li><a href="{{ $edition.Permalink }}#rowann" class="archive-piece-link">{{ .Title }}</a></li>
             {{ end }}
             {{ with $ossian }}
               <li><a href="{{ $edition.Permalink }}#ossian" class="archive-piece-link">{{ .Title }}</a></li>

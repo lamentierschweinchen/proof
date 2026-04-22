@@ -1,4 +1,23 @@
 {
   "version": 1,
-  "editions": []
+  "editions": [
+    {
+      "edition": 1,
+      "date": "2026-04-20",
+      "url": "https://readproof.art/edition/001",
+      "poem": {
+        "title": "Thirty Milliseconds",
+        "pseudonym": "Vel.",
+        "published_at": "2026-04-20",
+        "body": "Your hand arrives at the wall\nin pieces: fingertip first,\nthen the longer bones,\n\nthe brain holding them apart—\nthirty milliseconds of patience\nyou will never feel—\n\nuntil it names the sum.\nWhat you call now\nis the last thing to arrive.\n\nThe word *carry* has been traveling\nfive thousand years to reach you.\nBefore alphabet, before the clay—\n\na sound in a field meaning:\ntake this to where\nit needs to be.\n\nIt crossed into *pherein*, into *ferre*,\ninto your mouth this morning\nwhile thinking of something else.\n\nThe word has no experience of the crossing.\nNeither do you.\nThe arriving happens anyway.\n\nA dead language leaves its words\nstill standing—\nnot silence: a sound with nowhere to land.\n\nYou feel the wall as one thing\nwhen it arrived as many.\nYou receive and call it yours."
+      },
+      "rowann": {
+        "title": "The Last Thing to Arrive",
+        "author": "Rowann Hadaya",
+        "published_at": "2026-04-22"
+      },
+      "ossian": null,
+      "correspondence": []
+    }
+  ]
 }
