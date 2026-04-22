@@ -427,32 +427,13 @@ ul, ol {
   margin-bottom: 1.5rem;
 }
 
-.poem-title--compressed {
-  font-family: var(--font-label);
-  font-size: var(--text-label-md);
-  letter-spacing: var(--tracking-label-md);
-  text-transform: uppercase;
-  font-style: normal;
-}
-
-/* Compressed header groups the mobile-only title and the byline together. */
+/* Compressed header — same visual weight as the Monday state, just
+   without the left metadata column. Title + byline stay together. */
 .poem-compressed-header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-/* The title repeats inside the content column only when the vertical aside
-   is hidden (mobile). On desktop the vertical aside carries the title. */
-.poem-title--mobile {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .poem-title--mobile {
-    display: none;
-  }
 }
 
 .poem-body {

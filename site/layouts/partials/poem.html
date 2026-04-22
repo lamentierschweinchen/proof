@@ -4,16 +4,17 @@
 {{ $compressed := .compressed | default false }}
 
 {{ if $compressed }}
-{{/* Compressed state: vertical title on desktop, byline in content column.
-     Title also repeats in the content column on mobile, where the aside is
-     hidden, so the piece is never presented without its name. */}}
+{{/* Compressed state: the desktop layout still offsets the poem into the
+     right-hand column (leaving room for other sections to accrete), and the
+     vertical aside carries the title as a side marker. The title and byline
+     also appear at full weight in the content column on every viewport. */}}
 <section id="poem" class="edition-grid poem-section poem-section--compressed">
   <aside class="poem-aside">
     <div class="poem-aside-text">{{ $poem.Title }}</div>
   </aside>
   <article class="poem-content-col">
     <header class="poem-compressed-header">
-      <div class="poem-title--compressed poem-title--mobile">{{ $poem.Title }}</div>
+      <h2 class="poem-title">{{ $poem.Title }}</h2>
       <span class="label-md poem-byline">{{ $poem.Params.pseudonym }}</span>
     </header>
     <div class="poem-body">
