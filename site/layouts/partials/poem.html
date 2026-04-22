@@ -4,13 +4,18 @@
 {{ $compressed := .compressed | default false }}
 
 {{ if $compressed }}
-{{/* Friday state: compressed poem with side marker */}}
+{{/* Compressed state: vertical title on desktop, byline in content column.
+     Title also repeats in the content column on mobile, where the aside is
+     hidden, so the piece is never presented without its name. */}}
 <section id="poem" class="edition-grid poem-section poem-section--compressed">
   <aside class="poem-aside">
-    <div class="poem-aside-text">Section I</div>
+    <div class="poem-aside-text">{{ $poem.Title }}</div>
   </aside>
   <article class="poem-content-col">
-    <div class="poem-title--compressed">{{ $poem.Title }}</div>
+    <header class="poem-compressed-header">
+      <div class="poem-title--compressed poem-title--mobile">{{ $poem.Title }}</div>
+      <span class="label-md poem-byline">{{ $poem.Params.pseudonym }}</span>
+    </header>
     <div class="poem-body">
       {{ $poem.Content }}
     </div>

@@ -433,7 +433,26 @@ ul, ol {
   letter-spacing: var(--tracking-label-md);
   text-transform: uppercase;
   font-style: normal;
+}
+
+/* Compressed header groups the mobile-only title and the byline together. */
+.poem-compressed-header {
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* The title repeats inside the content column only when the vertical aside
+   is hidden (mobile). On desktop the vertical aside carries the title. */
+.poem-title--mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .poem-title--mobile {
+    display: none;
+  }
 }
 
 .poem-body {
@@ -471,7 +490,14 @@ ul, ol {
 }
 
 .poem-byline {
+  display: inline-block;
   margin-top: 0.5rem;
+}
+
+/* In the compressed header, the flex gap handles spacing — reset the
+   Monday-state margin so the byline doesn't double up. */
+.poem-compressed-header .poem-byline {
+  margin-top: 0;
 }
 
 .poem-marginalia {
