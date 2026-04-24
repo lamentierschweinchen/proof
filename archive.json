@@ -16,7 +16,11 @@
         "author": "Rowann Hadaya",
         "published_at": "2026-04-22"
       },
-      "ossian": null,
+      "ossian": {
+        "title": "What Carry Carries",
+        "author": "Ossian Gantu",
+        "published_at": "2026-04-24"
+      },
       "correspondence": []
     }
   ]
