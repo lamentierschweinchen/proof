@@ -758,11 +758,15 @@ ul, ol {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
   width: 100%;
   padding: 4rem 2rem;
   margin-top: 6rem;
   background-color: var(--color-surface-low);
+}
+
+.site-footer .footer-title {
+  margin-bottom: 0.5rem;
 }
 
 .footer-nav {
