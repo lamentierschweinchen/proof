@@ -453,11 +453,18 @@ ul, ol {
   margin-bottom: 6rem;
 }
 
-.poem-aside {
+.poem-aside,
+.essay-aside {
   display: none;
 }
 
-.poem-aside-text {
+/* Vertical piece-title that sticks alongside its section and un-sticks
+   as the section's bottom scrolls past. Shared between poem (compressed
+   state) and essays. The grid cell stretches to full section height;
+   the text element inside is position: sticky so it slides within that
+   stretched parent. */
+.poem-aside-text,
+.essay-aside-text {
   font-family: var(--font-label);
   font-size: 10px;
   letter-spacing: 0.3em;
@@ -465,9 +472,8 @@ ul, ol {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   opacity: 0.4;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
+  position: sticky;
+  top: 3rem;
 }
 
 .poem-byline {
@@ -548,6 +554,11 @@ ul, ol {
 }
 
 @media (min-width: 768px) {
+  .essay-aside {
+    grid-column: 1 / 2;
+    display: block;
+  }
+
   .essay-content-col {
     grid-column: 2 / 9;
   }

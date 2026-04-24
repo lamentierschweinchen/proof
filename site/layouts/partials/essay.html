@@ -3,6 +3,9 @@
 {{ $id := .id }}
 
 <section id="{{ $id }}" class="edition-grid essay-section">
+  <aside class="essay-aside">
+    <div class="essay-aside-text">{{ $essay.Title }}</div>
+  </aside>
   <div class="essay-content-col">
     <div class="essay-header">
       <span class="label-md" style="opacity: 0.6;">{{ $essay.Params.author }}</span>
