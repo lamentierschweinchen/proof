@@ -36,20 +36,25 @@
         <div class="archive-entry-content">
           <div class="archive-entry-info">
             <span class="label-sm">{{ $edition.Date.Format "January 2, 2006" }}</span>
-            {{ with $poem }}
-              <span class="archive-dot">&middot;</span>
-              <span class="archive-pseudonym">{{ .Params.pseudonym }}</span>
-            {{ end }}
           </div>
           <ul class="archive-pieces">
             {{ with $poem }}
-              <li><a href="{{ $edition.Permalink }}" class="archive-piece-link">{{ .Title }}</a></li>
+              <li class="archive-piece">
+                <a href="{{ $edition.Permalink }}" class="archive-piece-link">{{ .Title }}</a>
+                <span class="archive-piece-byline">{{ .Params.pseudonym }}</span>
+              </li>
             {{ end }}
             {{ with $rowann }}
-              <li><a href="{{ $edition.Permalink }}#rowann" class="archive-piece-link">{{ .Title }}</a></li>
+              <li class="archive-piece">
+                <a href="{{ $edition.Permalink }}#rowann" class="archive-piece-link">{{ .Title }}</a>
+                <span class="archive-piece-byline">{{ .Params.author }}</span>
+              </li>
             {{ end }}
             {{ with $ossian }}
-              <li><a href="{{ $edition.Permalink }}#ossian" class="archive-piece-link">{{ .Title }}</a></li>
+              <li class="archive-piece">
+                <a href="{{ $edition.Permalink }}#ossian" class="archive-piece-link">{{ .Title }}</a>
+                <span class="archive-piece-byline">{{ .Params.author }}</span>
+              </li>
             {{ end }}
           </ul>
         </div>

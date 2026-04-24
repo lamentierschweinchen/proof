@@ -902,19 +902,17 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
-.archive-dot {
-  color: rgba(198, 198, 198, 0.3);
-}
-
-.archive-pseudonym {
-  font-family: var(--font-headline);
-  font-style: italic;
-}
-
 .archive-pieces {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.archive-piece {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75em;
 }
 
 .archive-piece-link {
@@ -924,6 +922,19 @@ ul, ol {
 
 .archive-piece-link:hover {
   font-style: italic;
+}
+
+.archive-piece-byline {
+  font-family: var(--font-headline);
+  font-style: italic;
+  opacity: 0.55;
+}
+
+.archive-piece-byline::before {
+  content: "— ";
+  font-style: normal;
+  margin-right: 0.2em;
+  opacity: 0.7;
 }
 
 /* Geological Recession */
