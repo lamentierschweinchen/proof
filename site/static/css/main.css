@@ -361,6 +361,14 @@ ul, ol {
   margin-bottom: 1.5rem;
 }
 
+.hero-manifest-link {
+  transition: color 200ms, opacity 200ms;
+}
+
+.hero-manifest-link:hover {
+  color: var(--color-ink);
+}
+
 .hero-title {
   font-family: var(--font-headline);
   font-size: var(--text-display);
