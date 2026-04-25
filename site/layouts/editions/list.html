@@ -18,6 +18,8 @@
       {{ $poem := $edition.Resources.GetMatch "poem.md" }}
       {{ $rowann := $edition.Resources.GetMatch "rowann.md" }}
       {{ $ossian := $edition.Resources.GetMatch "ossian.md" }}
+      {{ $correspondence := $edition.Resources.Match "correspondence-*.md" }}
+      {{ $hasCorrespondence := gt (len $correspondence) 0 }}
 
       {{/* Tier labels */}}
       {{ $tierLabel := "" }}
@@ -54,6 +56,15 @@
               <li class="archive-piece">
                 <a href="{{ $edition.Permalink }}#ossian" class="archive-piece-link">{{ .Title }}</a>
                 <span class="archive-piece-byline">{{ .Params.author }}</span>
+              </li>
+            {{ end }}
+            {{ if $hasCorrespondence }}
+              {{ $byline := "" }}
+              {{ with $rowann }}{{ $byline = .Params.author }}{{ end }}
+              {{ with $ossian }}{{ $byline = printf "%s ↔ %s" $byline .Params.author }}{{ end }}
+              <li class="archive-piece">
+                <a href="{{ $edition.Permalink }}#correspondence" class="archive-piece-link">Correspondence</a>
+                {{ with $byline }}<span class="archive-piece-byline">{{ . }}</span>{{ end }}
               </li>
             {{ end }}
           </ul>

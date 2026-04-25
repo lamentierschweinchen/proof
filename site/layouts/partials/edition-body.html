@@ -47,9 +47,17 @@
 <div class="edition-main">
   {{/* Hero — shows whenever companions exist (Wednesday onward). */}}
   {{ if $hasCompanions }}
+  {{ $manifest := slice }}
+  {{ with $poem }}{{ $manifest = $manifest | append .Title }}{{ end }}
+  {{ with $rowann }}{{ $manifest = $manifest | append .Title }}{{ end }}
+  {{ with $ossian }}{{ $manifest = $manifest | append .Title }}{{ end }}
+  {{ if $hasCorrespondence }}{{ $manifest = $manifest | append "Correspondence" }}{{ end }}
   <header class="edition-grid edition-hero">
     <div class="hero-content">
       <span class="hero-volume">Edition {{ printf "%03d" .Params.edition }} &middot; {{ .Date.Format "January 2, 2006" }}</span>
+      {{ if gt (len $manifest) 0 }}
+      <div class="hero-manifest">{{ delimit $manifest " · " }}</div>
+      {{ end }}
     </div>
   </header>
   {{ end }}

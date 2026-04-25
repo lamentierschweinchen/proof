@@ -345,8 +345,20 @@ ul, ol {
   letter-spacing: var(--tracking-label-sm);
   text-transform: uppercase;
   opacity: 0.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   display: block;
+}
+
+/* Manifest of pieces in this edition. Same family as the volume label
+   above it but italic + sentence-case so it reads as a list of works,
+   not a section title. */
+.hero-manifest {
+  font-family: var(--font-label);
+  font-size: var(--text-label-sm);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  opacity: 0.45;
+  margin-bottom: 1.5rem;
 }
 
 .hero-title {
@@ -454,17 +466,19 @@ ul, ol {
 }
 
 .poem-aside,
-.essay-aside {
+.essay-aside,
+.correspondence-aside {
   display: none;
 }
 
 /* Vertical piece-title that sticks alongside its section and un-sticks
    as the section's bottom scrolls past. Shared between poem (compressed
-   state) and essays. The grid cell stretches to full section height;
-   the text element inside is position: sticky so it slides within that
-   stretched parent. */
+   state), essays, and correspondence. The grid cell stretches to full
+   section height; the text element inside is position: sticky so it
+   slides within that stretched parent. */
 .poem-aside-text,
-.essay-aside-text {
+.essay-aside-text,
+.correspondence-aside-text {
   font-family: var(--font-label);
   font-size: 10px;
   letter-spacing: 0.3em;
@@ -681,9 +695,43 @@ ul, ol {
 }
 
 @media (min-width: 768px) {
+  .correspondence-aside {
+    grid-column: 1 / 2;
+    display: block;
+  }
+
   .correspondence-col {
     grid-column: 4 / 10;
   }
+}
+
+.correspondence-body {
+  position: relative;
+  display: grid;
+  grid-template-rows: 24rem;
+  overflow: hidden;
+  transition: grid-template-rows 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.correspondence-body.expanded {
+  grid-template-rows: 1fr;
+}
+
+.correspondence-body-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.correspondence-body.expanded .paper-reveal {
+  opacity: 0;
+}
+
+.correspondence-body.expanded + .expand-trigger {
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .correspondence-header {

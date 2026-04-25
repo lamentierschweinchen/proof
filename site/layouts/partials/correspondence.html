@@ -1,16 +1,27 @@
 {{/* Correspondence partial — receives a slice of page resources */}}
 <section id="correspondence" class="edition-grid correspondence-section">
+  <aside class="correspondence-aside">
+    <div class="correspondence-aside-text">Correspondence</div>
+  </aside>
   <div class="correspondence-col">
-    <div class="correspondence-header">IV. Correspondence</div>
-    {{ range sort . ".Params.date" "asc" }}
-    <div class="letter">
-      <p class="letter-date">
-        {{ .Date.Format "2 January" }}{{ with .Params.location }}, {{ . }}{{ end }}
-      </p>
-      <div class="letter-body">
-        {{ .Content }}
+    <div class="correspondence-header">Correspondence</div>
+    <div class="correspondence-body" data-expandable>
+      <div class="correspondence-body-inner">
+        {{ range sort . ".Params.date" "asc" }}
+        <div class="letter">
+          <p class="letter-date">
+            {{ .Date.Format "2 January" }}{{ with .Params.location }}, {{ . }}{{ end }}
+          </p>
+          <div class="letter-body">
+            {{ .Content }}
+          </div>
+        </div>
+        {{ end }}
       </div>
+      <div class="paper-reveal"></div>
     </div>
-    {{ end }}
+    <button class="expand-trigger" data-expand-btn>
+      <span class="expand-text">CONTINUE READING</span>
+    </button>
   </div>
 </section>
