@@ -21,7 +21,13 @@
         "author": "Ossian Gantu",
         "published_at": "2026-04-24"
       },
-      "correspondence": []
+      "correspondence": [
+        {
+          "from": "Rowann Hadaya",
+          "to": "Ossian Gantu",
+          "published_at": "2026-04-25"
+        }
+      ]
     }
   ]
 }
