@@ -24,7 +24,7 @@
       {{/* Tier labels */}}
       {{ $tierLabel := "" }}
       {{ if eq $i 0 }}{{ $tierLabel = "Current" }}{{ end }}
-      {{ if eq $tier 2 }}{{ if eq $i 1 }}{{ $tierLabel = "Late Cycle" }}{{ end }}{{ end }}
+      {{ if eq $tier 2 }}{{ if eq $i 1 }}{{ $tierLabel = "Previous Edition" }}{{ end }}{{ end }}
       {{ if eq $tier 3 }}{{ if eq $i 3 }}{{ $tierLabel = "Mid Cycle" }}{{ end }}{{ end }}
       {{ if eq $tier 4 }}{{ if eq $i 6 }}{{ $tierLabel = "Receding" }}{{ end }}{{ end }}
 
