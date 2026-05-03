@@ -5,7 +5,7 @@ edition: 3
 date: 2026-05-04
 draft: true
 description: "What Color? — a poem by Banerry."
-_build:
+build:
   list: never
   render: never
   publishResources: false
