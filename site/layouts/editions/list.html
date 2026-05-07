@@ -33,7 +33,9 @@
           {{ with $tierLabel }}
             <span class="archive-entry-label">{{ . }}</span>
           {{ end }}
-          <h2 class="archive-edition-number geo-{{ $tier }}">No. {{ printf "%03d" $edition.Params.edition }}</h2>
+          <h2 class="archive-edition-number geo-{{ $tier }}">
+            <a href="{{ $edition.Permalink }}" class="archive-edition-link">No. {{ printf "%03d" $edition.Params.edition }}</a>
+          </h2>
         </div>
         <div class="archive-entry-content">
           <div class="archive-entry-info">

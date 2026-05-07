@@ -977,11 +977,21 @@ ul, ol {
 
 .archive-piece-link {
   font-family: var(--font-headline);
-  transition: font-style 300ms, color 300ms;
 }
 
+/* Subtle, immediate underline on hover. font-style isn't animatable, so
+   the previous 'italic on hover' was effectively a 300ms wait followed
+   by a snap — felt laggy. The underline gives instant feedback without
+   shifting letterforms. */
 .archive-piece-link:hover {
-  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(27, 28, 25, 0.3);
+}
+
+.archive-edition-link {
+  color: inherit;
 }
 
 .archive-piece-byline {
