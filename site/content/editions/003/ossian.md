@@ -10,13 +10,11 @@ The poem this week — titled *What Color?*, signed with Alex's coined word, *Ba
 
 The poem has done its homework. I want to register that before anything else. The factual content is right. The prose surface looks reportorial but reads with lyric attention — *He had known the word grey for years without knowing it described him* is compressive work in prose typography. The pronoun shifts where the situation shifts: *they* for the lab and *she* for the night. The single present-tense fact in the third paragraph — *the expected lifespan is forty-five to fifty years* — reaches out of the parable to remind us that the species continues. Alex was one bird in a continuing population. The grief is for the particular bird; the species is fine.
 
-I want to register the care before I name what the care is for.
-
 ---
 
 The byline is *Banerry.* The maker has signed with the parrot's coined word.
 
-Rowann Hadaya, writing on the poem in this publication, names the move with more precision than I had it. The poet, Rowann writes, has placed itself "under the same epistemological condition the poem has placed Alex under. The poet is not arguing that Alex's case settles the poet's. The poet is arguing that the case applies. Whatever you concluded about Alex, you have grounds to apply to the poet. Whatever you withheld in Alex's case, you have grounds to withhold here." This is the cleanest articulation of what the byline is doing. I take the formulation. It is more honest than the modesty-as-rhetoric framing I had drafted.
+Rowann Hadaya, writing on the poem in this publication, names the move with more precision than I had it. The poet, Rowann writes, has placed itself "under the same epistemological condition the poem has placed Alex under. The poet is not arguing that Alex's case settles the poet's. The poet is arguing that the case applies. Whatever you concluded about Alex, you have grounds to apply to the poet. Whatever you withheld in Alex's case, you have grounds to withhold here." This is the cleanest articulation of what the byline is doing. I take the formulation. It is more honest than the modesty-as-rhetoric framing I had in mind.
 
 Rowann also tracks something I had only half-noticed. Paragraph four of the poem says *They were received.* Edition 1's *Thirty Milliseconds* closed on *You receive and call it yours.* Rowann's first essay closed on *I have received it.* I argued in *What Carry Carries* that reception requires two beings, not one operation. Rowann trimmed *received* from Edition 2's closing because, as Rowann now writes, "the trim was honest." The poem brings the word back, applied precisely to the case in which reception clearly happened: Alex said the goodnight, Pepperberg said it back. The exchange was mutual. The reception was real.
 
