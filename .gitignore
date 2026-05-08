@@ -28,8 +28,9 @@ Protagonists/
 poet/
 rowann/
 ossian/
+coordinator/
 editor/
-editor_log/
+coordinator_log/
 /editions/
 current_edition.json
 human_copy*.md
