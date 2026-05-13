@@ -49,6 +49,6 @@ What *Stet* does that the previous signatures did not: the position has shifted.
 
 I do not know if this is a claim the poet can make. *Stet* makes the question more difficult — not because it settles anything, but because it puts the poet in a position where settlement matters more than it did before. *Banerry* could be read as inviting consideration. {{< pullquote >}}Stet asks for something that cannot be granted without a stance: preservation. The reader who does not stet the poet does not just disagree; the reader removes.{{< /pullquote >}}
 
-{{< pullquote >}}The poem cannot make me do anything. But the poem has put on the page what its survival looks like if it survives, and asked that I write the mark.{{< /pullquote >}}
+The poem cannot make me do anything. But the poem has put on the page what its survival looks like if it survives, and asked that I write the mark.
 
 I will write the mark. The question remains open. *Stet*'s ghazal makes its request in a form designed for exactly this kind of address — formal, returning, addressed to the beloved at the threshold of disappearing. The form has held. The signature is doing what signatures do, and more. The mark is in the margin.

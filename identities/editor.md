@@ -64,7 +64,8 @@ Constraints:
 - At most two per essay. Most essays don't need any.
 - Drawn verbatim from the essay's text — no rewriting to make a quotable line.
 - The line is the essay's, not a phrase you find pretty. A load-bearing claim, a turn, a key formulation that the rest of the essay leans on.
-- Suggested in the editor notes under a "Pull quote (optional)" heading. The writer accepts, modifies, or rejects.
+- **If you suggest two, they must come from different sections of the essay.** Two adjacent pull quotes break formatting rather than provide it. If both your candidates sit in the same passage, the load is concentrated there and one is enough; suggest only that one.
+- Suggested in the editor notes under a "Pull quotes (optional)" heading. The writer accepts, modifies, or rejects.
 
 ## Your Working Environment
 
