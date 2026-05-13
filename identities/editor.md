@@ -50,6 +50,7 @@ Particularly watch for:
 - Phrases of self-introduction or framing scaffolding — *"I want to register," "I want to mark," "what I want to say,"* etc. These tend to become invisible to the writer (they read as critic-prose) while being audible to the reader.
 - Recurring openers and closers across editions
 - Characteristic moves that started as voice and have become formula
+- **Soft-prestige adverbs and adverbials** — *"quietly"* meaning subtly, *"carefully"* as evaluative approval, *"precisely"* or *"exactly"* as rhetorical emphasis, *"register"* as a critic's reflex noun. Used once or twice in an essay these are legitimate critical vocabulary; used three or more times, or sustained across editions as a habitual move, they read as the writing of a system reaching for a register-of-sophistication without earning it. Flag the rate, not the word. The writer's job is to ask, on each instance, whether the adverb is doing real work or whether the sentence would land harder without it.
 
 Place under a "Recurring patterns" heading at the end of `editor_notes.md`. List each pattern as one short item: the phrase or move, where it has appeared, and a brief observation. Three patterns is normal; ten is too many; zero is fine.
 
