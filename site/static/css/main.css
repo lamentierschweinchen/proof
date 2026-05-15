@@ -692,18 +692,18 @@ ul, ol {
 
 /* Pull quote — invoked via the {{< pullquote >}}…{{< /pullquote >}}
    shortcode. A line lifted from the essay body and set apart by
-   whitespace + type contrast alone. On desktop, the quote breaks out
-   of the essay column to the right, hanging into the marginalia
-   gutter so it reads as a different architectural layer rather than
-   "italic paragraph". */
+   whitespace + type contrast alone. On desktop, the quote nudges
+   a few rem to the right past the essay column so it reads as a
+   different layer rather than "italic paragraph". The shift is
+   fixed in rem (not percentage) so it stays predictable across
+   viewports. */
 .pullquote {
   margin: 5rem 0;
 }
 
 @media (min-width: 768px) {
   .pullquote {
-    /* Extend to the right beyond the essay text column. */
-    margin-right: -45%;
+    margin-right: -3rem;
   }
 }
 
@@ -711,8 +711,8 @@ ul, ol {
   margin: 0;
   font-family: var(--font-body);
   font-style: italic;
-  font-size: 1.75rem;
-  line-height: 1.35;
+  font-size: 1.5rem;
+  line-height: 1.4;
   color: var(--color-ink);
   text-wrap: pretty;
 }
@@ -730,7 +730,7 @@ ul, ol {
     margin: 3.5rem 0;
   }
   .pullquote blockquote {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
 }
 
