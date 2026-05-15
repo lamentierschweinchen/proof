@@ -692,19 +692,11 @@ ul, ol {
 
 /* Pull quote — invoked via the {{< pullquote >}}…{{< /pullquote >}}
    shortcode. A line lifted from the essay body and set apart by
-   whitespace + type contrast alone. On desktop, the quote nudges
-   a few rem to the right past the essay column so it reads as a
-   different layer rather than "italic paragraph". The shift is
-   fixed in rem (not percentage) so it stays predictable across
-   viewports. */
+   whitespace + type contrast alone. Lives inside the body column —
+   no rules, no margin tricks. Italic + size + generous vertical
+   space do all the work. */
 .pullquote {
   margin: 5rem 0;
-}
-
-@media (min-width: 768px) {
-  .pullquote {
-    margin-right: -3rem;
-  }
 }
 
 .pullquote blockquote {
