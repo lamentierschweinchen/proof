@@ -692,11 +692,20 @@ ul, ol {
 
 /* Pull quote — invoked via the {{< pullquote >}}…{{< /pullquote >}}
    shortcode. A line lifted from the essay body and set apart by
-   whitespace + type contrast alone. Lives inside the body column —
-   no rules, no margin tricks. Italic + size + generous vertical
-   space do all the work. */
+   whitespace + type contrast alone. On desktop the quote nudges
+   3rem past the column's right edge into the gutter — modest enough
+   not to overflow on standard viewports, enough to read as a
+   deliberate hang. The writer controls line breaks via inline <br>
+   in the markdown so the breaks land on semantic pauses, not on
+   whatever the browser's wrapping algorithm picks. */
 .pullquote {
   margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .pullquote {
+    margin-right: -3rem;
+  }
 }
 
 .pullquote blockquote {

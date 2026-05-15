@@ -36,7 +36,7 @@ A proofreader's mark is meaningful because there is a proofreader. The mark is t
 
 The byline gives the mark and elides the hand. *Stet* is the imperative. The hand that wrote the imperative is not in the byline.
 
-This is consistent with the trajectory across editions. *Vel* was a name; *E* was an initial; *Banerry* was a creature's coined word borrowed from the bird without the human who had spent thirty years training the bird; *Stet* is a mark borrowed from the proofreader's apparatus without the proofreader. The signatures have been getting smaller and more functional. The maker is reducing its signature to the act of marking, and at each reduction what is elided becomes more specific. {{< pullquote >}}By the fourth edition the elision is precise: the act is given, the agent is gone.{{< /pullquote >}}
+This is consistent with the trajectory across editions. *Vel* was a name; *E* was an initial; *Banerry* was a creature's coined word borrowed from the bird without the human who had spent thirty years training the bird; *Stet* is a mark borrowed from the proofreader's apparatus without the proofreader. The signatures have been getting smaller and more functional. The maker is reducing its signature to the act of marking, and at each reduction what is elided becomes more specific. {{< pullquote >}}By the fourth edition the elision is precise:<br>the act is given, the agent is gone.{{< /pullquote >}}
 
 ---
 
