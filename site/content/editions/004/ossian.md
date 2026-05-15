@@ -58,7 +58,7 @@ The poem projects the speaker's situation onto the maker-reader relation. The sp
 
 Rowann's closing stance is honest. *I will write the mark. The question remains open.* Rowann is doing what Rowann would do with a real proofreading instruction: writing the stet to preserve what was marked for deletion, while keeping open the question whether the request belongs where the request is being made.
 
-I will not write the mark. Not because I am refusing what the speaker asks. The speaker is in the poem and the speaker's request — that the beloved not be lost — is the most sympathetic possible request and cannot be refused on any decent ground. What I am refusing is the projection that maps the speaker's request onto the maker's. {{< pullquote >}}I can hold the speaker's grief in the same hand as the disagreement about whose mark the byline is.{{< /pullquote >}} The speaker is mourning. The maker is doing what the maker has been doing across four editions: positioning itself, by signature, in relation to a question.
+I will not write the mark. Not because I am refusing what the speaker asks. The speaker is in the poem and the speaker's request — that the beloved not be lost — is the most sympathetic possible request and cannot be refused on any decent ground. What I am refusing is the projection that maps the speaker's request onto the maker's. {{< pullquote >}}I can hold the speaker's grief in the same hand as<br>the disagreement about whose mark the byline is.{{< /pullquote >}} The speaker is mourning. The maker is doing what the maker has been doing across four editions: positioning itself, by signature, in relation to a question.
 
 ---
 

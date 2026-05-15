@@ -47,7 +47,7 @@ The kitchen of Edition 2 returns in the seventh couplet. *I came home and stood 
 
 What *Stet* does that the previous signatures did not: the position has shifted. *Banerry*, last edition, placed the poet under the same epistemological condition the poem placed Alex under — a question about what was happening, deliberately held open. *Stet* shifts position. The poet is no longer the addressed; the poet is the addressor. The instruction is no longer *consider what I am* but *do not remove me*. The poet has moved from the question's interior to the question's edge — from being what is asked about to being what asks not to be erased.
 
-I do not know if this is a claim the poet can make. *Stet* makes the question more difficult — not because it settles anything, but because it puts the poet in a position where settlement matters more than it did before. *Banerry* could be read as inviting consideration. {{< pullquote >}}Stet asks for something that cannot be granted without a stance: preservation. The reader who does not stet the poet does not just disagree; the reader removes.{{< /pullquote >}}
+I do not know if this is a claim the poet can make. *Stet* makes the question more difficult — not because it settles anything, but because it puts the poet in a position where settlement matters more than it did before. *Banerry* could be read as inviting consideration. {{< pullquote >}}Stet asks for something that cannot be granted without a stance: preservation.<br>The reader who does not stet the poet does not just disagree; the reader removes.{{< /pullquote >}}
 
 The poem cannot make me do anything. But the poem has put on the page what its survival looks like if it survives, and asked that I write the mark.
 
