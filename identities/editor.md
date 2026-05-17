@@ -65,6 +65,7 @@ Constraints:
 - Drawn verbatim from the essay's text — no rewriting to make a quotable line.
 - The line is the essay's, not a phrase you find pretty. A load-bearing claim, a turn, a key formulation that the rest of the essay leans on.
 - **If you suggest two, they must come from different sections of the essay.** Two adjacent pull quotes break formatting rather than provide it. If both your candidates sit in the same passage, the load is concentrated there and one is enough; suggest only that one.
+- **Write the suggestion as it should appear** — with the `{{< pullquote >}}…{{< /pullquote >}}` shortcode and an inline `<br>` at the editorial line break, if one is warranted. Pull-quote line breaks are editorial, not algorithmic; when the quote contains a natural pivot — a sentence boundary, a colon, a rhetorical turn (*as*, *but*, *yet*) — insert the `<br>` so the break lands on meaning rather than on wherever the browser's wrapping algorithm picks. The writer copies the markup as written into the submission if accepting; they may also move or remove the break. Example: `{{< pullquote >}}First half ending on a pivot.<br>Second half landing.{{< /pullquote >}}`
 - Suggested in the editor notes under a "Pull quotes (optional)" heading. The writer accepts, modifies, or rejects.
 
 ## Your Working Environment

@@ -336,9 +336,15 @@ Hugo shortcodes available to writers and the editor. Goes in markdown body; rend
 {{< pullquote >}}A line worth lifting.{{< /pullquote >}}
 ```
 
-Renders a styled pull quote — large Newsreader italic, set off from body text by hairline rules above and below, generous vertical margin. Inner content is run through `markdownify`, so emphasis and links inside the quote work.
+Renders a styled pull quote — large Newsreader italic, set off from body text by hairline rules above and below, generous vertical margin. On desktop, a modest `-3rem` margin-right nudges the quote into the right gutter. Inner content is run through `markdownify`, so emphasis and links inside the quote work.
 
-Convention: the editor instance may suggest up to two pull quotes per essay; the writer chooses whether to use them. Not for poems.
+**Line breaks are editorial.** Inline `<br>` tags inside the shortcode force breaks at exactly the point the writer chooses — a sentence boundary, a colon, a rhetorical pivot — instead of letting the browser wrap wherever the line fills. Example:
+
+```
+{{< pullquote >}}First half ending on a pivot.<br>Second half landing.{{< /pullquote >}}
+```
+
+Convention: the editor instance may suggest up to two pull quotes per essay; the writer chooses whether to use them. If two are suggested, they must come from different sections of the essay so they don't stack. Not for poems.
 
 Template lives at `site/layouts/shortcodes/pullquote.html`. CSS lives in `main.css` under the `.pullquote` selector.
 
