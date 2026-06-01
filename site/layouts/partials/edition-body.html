@@ -70,6 +70,17 @@
   {{/* I. Poem */}}
   {{ partial "poem.html" (dict "poem" $poem "edition" $ "compressed" $hasCompanions) }}
 
+  {{/* Publisher's note — renders only on editions whose index.md carries a `note`
+       field (e.g. 006's sealing note). Sits between the poem and the first essay. */}}
+  {{ with .Params.note }}
+  <aside class="edition-grid publisher-note">
+    <div class="publisher-note-col">
+      <span class="label-sm">Publisher's note</span>
+      <div class="publisher-note-body">{{ . | markdownify }}</div>
+    </div>
+  </aside>
+  {{ end }}
+
   {{/* II. Rowann Hadaya */}}
   {{ if $hasRowann }}
     {{ partial "essay.html" (dict "essay" $rowann "number" "II" "id" "rowann") }}
