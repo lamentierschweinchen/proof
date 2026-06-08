@@ -799,7 +799,6 @@ ul, ol {
 .letter {
   margin-bottom: 6rem;
   padding-left: 2rem;
-  font-style: italic;
   border-left: 1px solid rgba(27, 28, 25, 0.05);
 }
 
@@ -830,11 +829,11 @@ ul, ol {
   margin-bottom: 1.5rem;
 }
 
-/* Letters render italic; cited quotes the critics mark with *emphasis* would
-   otherwise vanish into the surrounding italic. Flip them to roman (the
-   convention for emphasis within an italic passage) so citations read clearly. */
+/* The letter body is roman so the critics' cited quotes (*emphasis*) render as
+   ordinary italics. Letters stay distinct via the left rule + indent, the
+   "Correspondence" header, and the labeled (Inter, tracked, italic) date line. */
 .letter-body em {
-  font-style: normal;
+  font-style: italic;
 }
 
 
