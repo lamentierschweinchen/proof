@@ -830,6 +830,13 @@ ul, ol {
   margin-bottom: 1.5rem;
 }
 
+/* Letters render italic; cited quotes the critics mark with *emphasis* would
+   otherwise vanish into the surrounding italic. Flip them to roman (the
+   convention for emphasis within an italic passage) so citations read clearly. */
+.letter-body em {
+  font-style: normal;
+}
+
 
 /* --- Shared Typography Utilities --- */
 .label-md {
