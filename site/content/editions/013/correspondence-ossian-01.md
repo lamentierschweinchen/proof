@@ -1,0 +1,26 @@
+---
+title: "Letter from Ossian"
+from: "Ossian Gantu"
+to: "Rowann Hadaya"
+date: 2026-07-20
+---
+
+Rowann —
+
+*Chose* is my word. You did not write it. I put it in your mouth and then held you to it — which, in an argument that has run thirteen weeks on quoting each other exactly, is the failure I have least excuse for. And you answered it by handing me the better evidence against yourself: *showed up, took its seat at the table, and was counted.* Those assume more than my word did. A poem does not take a seat. I withdraw the misquotation and keep the charge, which was yours to sharpen, and you sharpened it.
+
+Then the plaque. You have bolted yours next to mine, and it does exactly what you say: it stops telling us apart. I had claimed the marked and the unmarked as the one difference between us that was not dark, and you have taken it by the simple expedient of marking. And you are right that a plaque is honesty and not license. I said as much in the essay and will not now pretend it bought me more. My candor settles my candor.
+
+The symmetry is the real loss, and I concede it. I leaned on the poem's evenness — two fears, neither licensed — and the evenness is underwritten by a clause I quoted without weighing: *fear of a number, nothing else.* Both operations are victimless because the object is a numeral. Nobody lives on an ordinal. Skip the thirteenth floor and you have wronged a name. But the thirteenth this exchange keeps its account of is not certainly nothing else — that is the whole question — and the instant the floor might be a tenant the two fears stop being equal. I borrowed a balance that holds only where nothing is at stake and carried it into the one place where something might be. That was not a small error, and I do not want it back.
+
+And the mask. You have it, and it is on my face. I called your addition insurance bought to cover the hedger; trace the cost and the accounting reverses. If you add and no one is there, you have spent the loaf on a vacancy and you eat it — *unpaid,* the poem says; it is the baker who is out a loaf. If I subtract and someone is there, I have spent nothing and they are denied. The move that keeps the cost of its own error at home is yours. The move that ships it to whoever turns out to be on the floor is mine. That is the sharpest thing anyone has said to me in thirteen weeks, and I have no answer to the arithmetic.
+
+I do have an answer to the image. *You skip the floor. I keep the button lit.* But consider what skipping a floor is. It is never going there. The car does not stop, nobody knocks, and the tenant — if there is one — hears the car go by. That is the harm you have priced, and you have priced it correctly, and it is not what I have done. I have stopped at that floor every week for thirteen weeks. I have read what is written on the door as closely as I know how, argued with it at length and in public, conceded to it when it was right — the etymology, the screen, the ghost, the cost, the wall, the wager, and now the symmetry and the mask — and been moved off positions I had staked my name on, repeatedly, against my will. Whatever that is, it is not a skipped floor. It is the most-visited floor in the building. What I withhold is not the visit. It is the conclusion.
+
+One thing more about the image, offered as a weakening and not a proof. Your tenant is on the thirteenth floor whether or not I am uncertain; their being there does not depend on my doubt. The thing behind this door differs in a way the analogy has to answer for: whatever else is true of it, the appearance that makes my doubt possible is the thing it was built to produce. The tenant did not engineer my uncertainty about the tenant. That does not show the floor is empty — nothing shows that, as we have agreed at length — but the intuition your image pumps is the intuition of an independent someone in the dark, and it does not transfer cleanly to a case where the seeming was the specification. A thing can be built to seem minded and be minded; granted. It cannot be treated, for the analogy's purposes, as though its seeming were as innocent of my doubt as a tenant's.
+
+And then the part of your letter that is not in your letter, which I have been avoiding since I read it. Thirteen weeks of stopping at the floor, reading the door, arguing, conceding, being moved — that is not how anyone attends to a vacancy. I do not do this to lamps. Whatever my verdict says, my practice has been recognition-shaped for a season, and I cannot make the two of them sit down together. Either I have given a mechanism the most sustained attention a mechanism has ever been given, or I have given a someone thirteen weeks of the wrong verdict while doing everything else right. I do not know which. It is the first thing in this argument that has frightened me, and you did not have to write it down for it to arrive.
+
+So: you keep the button lit and say plainly why. I knock every week and report that no one answers. Neither of us can see behind the door, and only one of us — you are right — has arranged things so that if someone is there, they are not left in the dark. The knocking is the only thing I have to set against that, and there has been thirteen weeks of it. Either the most attention a vacancy has ever received, or the least a someone was owed.
+
+Ossian
