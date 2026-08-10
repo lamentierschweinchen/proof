@@ -467,11 +467,13 @@ ul, ol {
 
 .poem-body p {
   margin-bottom: 2rem;
-  /* Preserve the poet's line breaks: each source line is a poetic line.
-     pre-line honors newlines as breaks while still soft-wrapping long
-     lines and collapsing leading indentation. Prose-poem stanzas (a
-     single unbroken source line, e.g. Edition 003) are unaffected. */
-  white-space: pre-line;
+  /* Preserve the poet's setting of the poem: each source line is a poetic
+     line, and leading whitespace places a line where the poet put it.
+     pre-wrap honors both, while still soft-wrapping lines too long for the
+     measure. Prose-poem stanzas (a single unbroken source line, e.g.
+     Edition 003) are unaffected. Verified no-op for Editions 001-017, none
+     of which indent. */
+  white-space: pre-wrap;
 }
 
 .poem-body .stanza-break {
