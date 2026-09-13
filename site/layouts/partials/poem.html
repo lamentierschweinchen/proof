@@ -3,6 +3,37 @@
 {{ $edition := .edition }}
 {{ $compressed := .compressed | default false }}
 
+{{- /* The poet's setting of the poem is meaning: each source line is a line,
+       blank lines separate stanzas, and leading spaces place a line where the
+       poet put it. Markdown strips leading whitespace from the continuation
+       lines of a paragraph before any stylesheet can preserve it, so a poem
+       with indented lines is rendered here stanza by stanza and line by line,
+       each line through the site's own Markdown (typographic quotes and
+       dashes, as for every other poem) and the poet's leading spaces put back
+       in front of it. .poem-body p is white-space: pre-wrap, which keeps both
+       the line breaks and the spaces. A poem without indented lines renders
+       exactly as it always has. */ -}}
+{{- $raw := replaceRE `\r\n?` "\n" $poem.RawContent -}}
+{{- $poemHTML := $poem.Content -}}
+{{- if findRE `(?m)^[ \t]+\S` $raw -}}
+  {{- $stanzas := split (replaceRE `\n[ \t]*\n(?:[ \t]*\n)*` "\n\n" (trim $raw "\n")) "\n\n" -}}
+  {{- $paras := slice -}}
+  {{- range $stanzas -}}
+    {{- $lines := slice -}}
+    {{- range split . "\n" -}}
+      {{- $rest := strings.TrimLeft " \t" . -}}
+      {{- $lead := substr . 0 (sub (len .) (len $rest)) -}}
+      {{- /* A line is a line, never a heading, quote, list or rule: escape the
+             characters Markdown would read as a block opener. */ -}}
+      {{- $rest = replaceRE `^([#>+*\x60|<-])` `\$1` $rest -}}
+      {{- $rest = replaceRE `^(\d+)([.)])(\s)` `$1\$2$3` $rest -}}
+      {{- $lines = $lines | append (printf "%s%s" $lead ($poem.RenderString (dict "display" "inline") $rest)) -}}
+    {{- end -}}
+    {{- $paras = $paras | append (printf "<p>%s</p>" (delimit $lines "\n")) -}}
+  {{- end -}}
+  {{- $poemHTML = delimit $paras "\n" | safeHTML -}}
+{{- end }}
+
 {{ if $compressed }}
 {{/* Compressed state: the desktop layout still offsets the poem into the
      right-hand column (leaving room for other sections to accrete), and the
@@ -18,7 +49,7 @@
       <span class="label-md poem-byline">{{ $poem.Params.pseudonym }}</span>
     </header>
     <div class="poem-body">
-      {{ $poem.Content }}
+      {{ $poemHTML }}
     </div>
   </article>
 </section>
@@ -42,7 +73,7 @@
       <span class="label-md poem-byline">{{ $poem.Params.pseudonym }}</span>
     </header>
     <div class="poem-body">
-      {{ $poem.Content }}
+      {{ $poemHTML }}
     </div>
     {{ with $poem.Params.marginalia }}
     <aside class="poem-marginalia">
