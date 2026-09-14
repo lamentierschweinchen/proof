@@ -27,7 +27,9 @@
              characters Markdown would read as a block opener. */ -}}
       {{- $rest = replaceRE `^([#>+*\x60|<-])` `\$1` $rest -}}
       {{- $rest = replaceRE `^(\d+)([.)])(\s)` `$1\$2$3` $rest -}}
-      {{- $lines = $lines | append (printf "%s%s" $lead ($poem.RenderString (dict "display" "inline") $rest)) -}}
+      {{- /* The indent goes out as non-breaking spaces: the production build
+             minifies HTML, which collapses runs of ordinary spaces. */ -}}
+      {{- $lines = $lines | append (printf "%s%s" (replace $lead " " "\u00a0") ($poem.RenderString (dict "display" "inline") $rest)) -}}
     {{- end -}}
     {{- $paras = $paras | append (printf "<p>%s</p>" (delimit $lines "\n")) -}}
   {{- end -}}
