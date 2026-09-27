@@ -476,6 +476,13 @@ ul, ol {
   white-space: pre-wrap;
 }
 
+/* A stanza followed by a run of blank lines (the poem partial writes the
+   count as --blank-lines) gets that many stanza gaps, so a break the poet
+   made twice as long is twice as long on the page. */
+.poem-body p.blank-lines {
+  margin-bottom: calc(var(--blank-lines) * 2rem);
+}
+
 .poem-body .stanza-break {
   margin-bottom: 6rem;
 }

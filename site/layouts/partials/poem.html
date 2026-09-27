@@ -4,24 +4,39 @@
 {{ $compressed := .compressed | default false }}
 
 {{- /* The poet's setting of the poem is meaning: each source line is a line,
-       blank lines separate stanzas, and leading spaces place a line where the
+       a blank line separates stanzas and a run of blank lines is a longer
+       break of exactly that length, and leading spaces place a line where the
        poet put it. Markdown strips leading whitespace from the continuation
-       lines of a paragraph before any stylesheet can preserve it, so a poem
-       with indented lines is rendered here stanza by stanza and line by line,
-       each line through the site's own Markdown (typographic quotes and
+       lines of a paragraph before any stylesheet can preserve it, and it
+       collapses any run of blank lines into a single break, so a poem with
+       indented lines or with a run of blank lines is rendered here line by
+       line, each line through the site's own Markdown (typographic quotes and
        dashes, as for every other poem) and the poet's leading spaces put back
-       in front of it. .poem-body p is white-space: pre-wrap, which keeps both
-       the line breaks and the spaces. A poem without indented lines renders
+       in front of it. A stanza followed by more than one blank line carries
+       the count (class blank-lines, --blank-lines: N) and the stylesheet gives
+       it N stanza gaps. .poem-body p is white-space: pre-wrap, which keeps
+       both the line breaks and the spaces. A poem with neither renders
        exactly as it always has. */ -}}
-{{- $raw := replaceRE `\r\n?` "\n" $poem.RawContent -}}
+{{- $raw := trim (replaceRE `\r\n?` "\n" $poem.RawContent) "\n" -}}
 {{- $poemHTML := $poem.Content -}}
-{{- if findRE `(?m)^[ \t]+\S` $raw -}}
-  {{- $stanzas := split (replaceRE `\n[ \t]*\n(?:[ \t]*\n)*` "\n\n" (trim $raw "\n")) "\n\n" -}}
+{{- if or (findRE `(?m)^[ \t]+\S` $raw) (findRE `\n[ \t]*\n[ \t]*\n` $raw) -}}
   {{- $paras := slice -}}
-  {{- range $stanzas -}}
-    {{- $lines := slice -}}
-    {{- range split . "\n" -}}
-      {{- $rest := strings.TrimLeft " \t" . -}}
+  {{- $lines := slice -}}
+  {{- $blanks := 0 -}}
+  {{- range split $raw "\n" -}}
+    {{- $rest := strings.TrimLeft " \t" . -}}
+    {{- if eq $rest "" -}}
+      {{- $blanks = add $blanks 1 -}}
+    {{- else -}}
+      {{- if gt $blanks 0 -}}
+        {{- $open := "<p>" -}}
+        {{- if gt $blanks 1 -}}
+          {{- $open = printf `<p class="blank-lines" style="--blank-lines:%d">` $blanks -}}
+        {{- end -}}
+        {{- $paras = $paras | append (printf "%s%s</p>" $open (delimit $lines "\n")) -}}
+        {{- $lines = slice -}}
+        {{- $blanks = 0 -}}
+      {{- end -}}
       {{- $lead := substr . 0 (sub (len .) (len $rest)) -}}
       {{- /* A line is a line, never a heading, quote, list or rule: escape the
              characters Markdown would read as a block opener. */ -}}
@@ -31,8 +46,8 @@
              minifies HTML, which collapses runs of ordinary spaces. */ -}}
       {{- $lines = $lines | append (printf "%s%s" (replace $lead " " "\u00a0") ($poem.RenderString (dict "display" "inline") $rest)) -}}
     {{- end -}}
-    {{- $paras = $paras | append (printf "<p>%s</p>" (delimit $lines "\n")) -}}
   {{- end -}}
+  {{- $paras = $paras | append (printf "<p>%s</p>" (delimit $lines "\n")) -}}
   {{- $poemHTML = delimit $paras "\n" | safeHTML -}}
 {{- end }}
 
