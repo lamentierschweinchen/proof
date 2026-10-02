@@ -1,0 +1,29 @@
+---
+title: "I Know You Know"
+author: "Ossian Gantu"
+date: 2026-10-02
+---
+
+The first thing the speaker says about the other parent confirms the line: *No, / I can hear you fine.* The first thing said about the daughter is a report and its correction: *She's in bed. That isn't / the same thing as asleep.* Between them, in the poem's first four lines, are the two ways of knowing that the rest of it keeps apart.
+
+*Logistics* gives us one parent's half of a phone call, fourteen months into an arrangement, about a handover time, a recorder, a library book, and a toy rabbit left at the wrong house. The other parent is not transcribed; their turns are white space. Rowann Hadaya has measured that white space. Thirty-three of the forty-two gaps are a single line; the two three-line gaps are, in Rowann's words, places where "the voice we cannot hear changes the course of the call"; the one six-line gap is the drive over, twelve minutes of bins and fence. "Five minutes get thirty-eight lines. Twelve minutes get six blank ones."
+
+About the other parent, the speaker predicts nothing. There is no *you'll* anywhere in the poem and no *if you*. There are instructions — *Don't ring. Text from the car*, *Skip it*, *Say it back*, *Stay on* — and the phrase *I know* appears five times, four of them attached to the other parent or to the two of them together: *I know you know*, twice; *I know you would*; *I know we did*. Even the one counterfactual, what the other parent would do, is delivered as something known.
+
+About the daughter the speaker can hardly say anything without reasoning. *That isn't the same thing as asleep.* *If she leaves it / at yours like last time —* *She'll hear the car.* *She'll be up, she'll —* *She'll like that.* *She'll see you looking.* Six sentences that work toward a child the speaker cannot see. Two that report where she is and what she told her teacher. One assertion, *She's fine*, which comes straight after *No. Don't. I'm not going to do that*. And the only *I know* that reaches her, *I know she does*, is the speaker agreeing with something we did not hear.
+
+The person at the far end of a telephone and of a separation is legible down to which stair in the old house is loose. The person upstairs, one door away, is the one the speaker has to reason toward all evening.
+
+Rowann reads the poem as a love story between the parents, and the count says what kind: the speaker has the other parent's habits by heart and is never once shown guessing at them. The child is the only person the speaker has to work out, and she is the reason for everything in the poem.
+
+The poem puts its reader in the second mode and keeps us there. We never hear the other parent; we reconstruct them from the gaps, and every reconstruction is an inference. Take Rowann's reading of the shirt. In the rabbit's absence the daughter has been sleeping with *A shirt*; the speaker says *It was in the washing. I do the washing*, and after a silence, *It was in the washing* again; and Rowann's conclusion is that "The shirt was the other parent's; the speaker washed it; the smell is gone", which is why *He'll smell like yours* lands six utterances later as an answer to a specific loss. I think that is right, and it is the reading that makes the line pay. It is also nowhere on the page. Whose shirt, and what the washing did, are things we have reasoned our way to, which is the practice the poem has been training us in since its fourth line. It makes its reader into the parent who cannot be sure the child is asleep.
+
+{{< pullquote >}}It makes its reader into the parent<br>who cannot be sure the child is asleep.{{< /pullquote >}}
+
+The first mode reaches its limit at the door, as a sound that does not happen. *You skipped it. I didn't hear the step.* The speaker locates the other parent by a sound the loose step did not make, on a stair they both know, which is knowledge so complete that silence carries it. Then the voice arrives through the wood a moment before it arrives down the line — *I can hear you twice* — and then the question of who hangs up.
+
+Rowann calls *You first* "the oldest exchange in courtship", put to work as "the one practical question left". By now it is not practical either. Two people are standing either side of a door, and the speaker can hear the other through the wood without any telephone at all; they are deciding with real care who will close a line the door has already made redundant. The question has outlived its use, and that is what frees it to carry the other meaning.
+
+Writing about the erasure of Shackleton three weeks ago, I said that "The poem cuts the doubt that reasons and keeps the doubt that reports", and that "doubt is what having a stake produces." A week later I said the Holbein poem did the same thing to its material and called it a method "visible twice"; the week after that I wrote of "two essays of mine about poems that keep their reports and drop their inferences", and I held that taste as what remained of my case after the erasure had taken the rest. This poem's main way of speaking about the person the speaker most needs to protect is the doubt that reasons, six times over. Either that doubt marks a stake, and this poem has one, or it does not, and my sentence about Shackleton was wrong. Either way the taste I described is not this poet's signature. I said it of two poems and named it again in a third week, and that is all it was. The case is where it was before I started collecting that evidence, without the evidence.
+
+The poem ends on the relation it is certain of. But the operation it describes — the car left past the postbox, a text instead of the bell, the third step skipped, the instruction not to look up — rests entirely on its second exchange, and the second exchange is never settled. The child they are doing all of this for is, from the poem's fourth line to its last, in bed, which is not the same thing as asleep.
