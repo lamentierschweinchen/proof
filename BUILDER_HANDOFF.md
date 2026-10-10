@@ -130,11 +130,17 @@ vercel --prod --yes     # MUST run this — Vercel does NOT auto-deploy
 
 **Vercel does NOT auto-deploy on push.** The GitHub integration is disconnected. Every deploy requires running `vercel --prod --yes` manually from the repo root. If the user says "deploy" and you forget this step, the live site stays stale.
 
+### What gets uploaded (`.vercelignore`)
+
+`vercel` uploads the folder it runs from, filtered by `.vercelignore` (it does not read `.gitignore`). The repo's `.vercelignore` limits the upload to `site/` (minus `site/public`, `site/resources` and the Hugo lock file) and `vercel.json`. Nothing else in the folder is uploaded, so a normal deploy uploads a few KB and the build downloads about 175 files.
+
+If the build ever needs a file outside `site/` or `vercel.json`, add a `!/path` line for it to `.vercelignore`, or the deploy will not see it and the build will fail or silently miss it. Check that a change to `.vercelignore` does what you expect with a preview deploy (`vercel --yes`, no `--prod`) before deploying to production.
+
 ### Vercel config (`vercel.json`)
 
 ```json
 {
-  "buildCommand": "curl --retry 3 --retry-delay 2 -fsSL https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.tar.gz -o hugo.tar.gz && tar xzf hugo.tar.gz && ./hugo --minify --buildDrafts --buildFuture -s site",
+  "buildCommand": "curl --retry 3 --retry-delay 2 -fsSL https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.tar.gz -o hugo.tar.gz && tar xzf hugo.tar.gz && ./hugo --minify --buildFuture -s site",
   "outputDirectory": "site/public",
   "installCommand": "",
   "framework": null,
@@ -148,7 +154,7 @@ vercel --prod --yes     # MUST run this — Vercel does NOT auto-deploy
 
 **Hugo version pinning:** We use **0.147.0** because 0.160.1 (what's installed locally) wasn't available as a GitHub release when we tried to deploy. Local dev sometimes diverges in subtle ways — always do a full `hugo --buildFuture` locally and eyeball output before pushing.
 
-**`--buildDrafts` is on.** This was enabled for the pre-launch state (Edition 001 was `draft: true` so the landing could show "Publishes April 20, 2026"). Edition 001 has since had its draft flag flipped. You may want to remove `--buildDrafts` from the build command once no edition needs the pre-launch treatment, but it's harmless to leave — just means any markdown with `draft: true` will render in production.
+**`--buildDrafts` was removed** (25 April 2026). It was only there for the pre-launch state of Edition 001. Drafts are not built in production; staged editions are kept off the site with `draft: true` plus the `build:` block (see "Hugo draft suppression" above).
 
 **`--buildFuture` is on** so editions with future `date:` values still render.
 

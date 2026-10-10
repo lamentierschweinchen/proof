@@ -1,0 +1,9 @@
+# Vercel receives only what the build needs: the Hugo source in site/
+# and vercel.json. Nothing else in this folder is uploaded.
+/*
+!/site
+!/vercel.json
+/site/public
+/site/resources
+/site/.hugo_build.lock
+.DS_Store
