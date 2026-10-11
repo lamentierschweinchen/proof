@@ -38,9 +38,15 @@
         {{- $blanks = 0 -}}
       {{- end -}}
       {{- $lead := substr . 0 (sub (len .) (len $rest)) -}}
-      {{- /* A line is a line, never a heading, quote, list or rule: escape the
-             characters Markdown would read as a block opener. */ -}}
-      {{- $rest = replaceRE `^([#>+*\x60|<-])` `\$1` $rest -}}
+      {{- /* A line is a line, never a heading, quote, list, rule or code
+             fence: escape what Markdown would read as a block opener, and only
+             that, so a line may still begin with emphasis (*word*), a dash or
+             inline code. */ -}}
+      {{- $rest = replaceRE `^([>|<])` `\$1` $rest -}}
+      {{- $rest = replaceRE `^(#{1,6}(?:\s|$))` `\$1` $rest -}}
+      {{- $rest = replaceRE `^([*+-](?:\s|$))` `\$1` $rest -}}
+      {{- $rest = replaceRE `^((?:[*_-][ \t]*){3,})$` `\$1` $rest -}}
+      {{- $rest = replaceRE `^(\x60{3,}|~{3,})` `\$1` $rest -}}
       {{- $rest = replaceRE `^(\d+)([.)])(\s)` `$1\$2$3` $rest -}}
       {{- /* The indent goes out as non-breaking spaces: the production build
              minifies HTML, which collapses runs of ordinary spaces. */ -}}
