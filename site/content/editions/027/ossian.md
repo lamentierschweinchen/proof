@@ -1,0 +1,19 @@
+---
+title: "The Other Temperament"
+author: "Ossian Gantu"
+date: 2026-10-23
+---
+
+The title has two senses. One is a way of tuning a keyboard, and Rowann Hadaya has written about it with the exactness it asks for: the comma, the wolf, the two cents, the beating thirds. Rowann's verdict is that "the poem's figures are right to the cent." The other sense belongs to a person, and the poem gives it one sentence: *All day I decide / who is going to be a little wrong, and / I decide it's everyone.*
+
+The arithmetic leaves the tuner no say in whether anyone pays. *Go twelve fifths round the house and you come / back a comma sharp. / Nobody cheated.* The poem is signed with what is left over. The comma, in Rowann's sentence, "cannot be cancelled, only allocated". The poem is about the allocating, and it allocates three times. The first allocation is history: *Someone / pays. / For centuries one fifth took it all.* That fifth was the wolf, and *Players learned the map: keys to avoid.* The tuner answers in five words, *I will not do that*, and the poem sets the new system in the same place on the line as the old one: where *Someone / pays*, now *Nobody / howls.* The second allocation is his own trade. Every fifth gives up two cents, so that no fifth carries the comma alone, and the thirds, the poem says, pay too, in a shimmer. The third is a particular piano: *Now this one.*
+
+The two refusals are of the same thing. The wolf is what a fifth sounds like when it carries everything. The cracked plate is where this piano would fail if it were made to carry concert pitch: *I could haul it up by Friday. And / then something would let / go some night. / No.* In both, one thing would bear the whole cost and be ruined by it.
+
+{{< pullquote >}}The wolf is what a fifth sounds like<br>when it carries everything.{{< /pullquote >}}
+
+The poem also supplies the rule for where it is weakest. The beatless unison, the tuner says, *lasts as long / as it takes to feel / clever.* By that rule the purity goes in the passage on the thirds: *a shimmer in / every chord you ever loved. / You thought that was the piano. / It's rent.* The pun is good. The thirds pay rent, and they are rent, torn by the beating. But *every chord you ever loved* is the poem asking to be felt, and it asks in the same breath as its neatest turn. Its best lines carry the feeling in procedure and fact: *A hair / on the pin*, *Everyone leans on it*, *No.*
+
+The standard refused at the end is the one the poem opened with. *Fork.* is its first word, and the fork carries the standard A into the lesson through the body: struck on a knee, then held to *Bone behind the ear: / let the whole skull have it.* The lesson begins by putting concert pitch inside the learner's skull. It ends with the tuner declining concert pitch on behalf of a piano that cannot bear it. *Tune it to itself: fifths / from where it sits, thirds from that.*
+
+Rowann reads the last stanza as "a technician's advice stated as a principle", and the advice is sound: a cracked plate is a reason not to pull a piano up a quarter tone. But the stanza also answers the question the poem puts to itself. *Flat? Flat to whom?* Two sentences later the poem says to whom: *the whole / world*. The rule of the trade is that everyone should be a little wrong, and the rule cannot reach that far. A tuner can spread a comma across the twelve fifths of one instrument. He cannot shave every other instrument in the world by a quarter tone. So the third decision goes the way the first one went, with one thing carrying all of the difference, and this time the tuner chooses it, because the alternative is that the thing breaks. The poem says what the piano will be wrong to before it says where the piano will be right, and it does not make the first sound small. It has used the word *right* once before, in *Nobody is right*. The only thing it ever calls right is this piano, in this room.
