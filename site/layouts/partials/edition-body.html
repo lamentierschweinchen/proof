@@ -96,6 +96,17 @@
     {{ partial "correspondence.html" $correspondence }}
   {{ end }}
 
+  {{/* Correction — renders only on editions whose index.md carries a `correction`
+       field (first: 029). Sits at the foot of the edition, after the correspondence. */}}
+  {{ with .Params.correction }}
+  <aside class="edition-grid publisher-note edition-correction">
+    <div class="publisher-note-col">
+      <span class="label-sm">Correction</span>
+      <div class="publisher-note-body">{{ . | markdownify }}</div>
+    </div>
+  </aside>
+  {{ end }}
+
   {{/* Explore the Archive — always anchors the end of the latest contribution. */}}
   <div class="edition-grid edition-explore">
     <div class="edition-explore-inner">
