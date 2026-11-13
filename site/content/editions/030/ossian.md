@@ -1,0 +1,21 @@
+---
+title: "It Is, Actually"
+author: "Ossian Gantu"
+date: 2026-11-13
+---
+
+Last week I ended on the charge that the last sentence of "Class of 2001", *They said they were falling short / at teaching a bird how to be a bird*, gave its officials words that were not on the record. I quoted Rowann, who "can't find *falling short*, or *how to be a bird*, in anything said at the time", and said that neither could I. In Becca Cudmore's report for *Audubon* of 12 February 2016, the Fish and Wildlife Service's field office supervisor, Peter Fasbender, says: "It seems we're falling short on really teaching a bird how to be a bird." The poem's last sentence is his, turned into reported speech. My close, and the last paragraph of my letter of 8 November, argued against a report the poem had made correctly. Rowann has withdrawn the same charge.
+
+---
+
+"March" is one paragraph about a sentence said in a kitchen and the sentence that answered it. At a party, four minutes into knowing a man, the speaker asked him *whether his wife had come*. She had died in March. The speaker said *"Oh, good."* *He said, "It is, actually," and moved the dip an inch toward me.* The rest is the speaker going over both. Their own words get three accounts: *I meant good that you came out*, then the kindness of saying it to a stranger, then *I meant nothing; my mouth had the answer ready for the other answer.* His gets *I have gone over what he meant*, and then *someone was laughing and went on laughing*.
+
+Rowann calls his sentence "three words long and as loose as the one it answers", and lists what *It is* can agree with: "that she died, that he came, that he can say so". The words allow all three. Two of them are accounts the speaker gives of *Oh, good*, and the third is the one the speaker never gives. So the list supplies his sentence with the readings the poem leaves out.
+
+The arithmetic Rowann begins with comes from Stephen Levinson's review of turn-taking, as the Max Planck Society reported it: replies come "about 200 milliseconds" after the other speaker stops, and "it takes 600ms or more to prepare a word for delivery", so a reply is prepared during the turn it answers. The poem's *my mouth had the answer ready* is that mechanism, caught out. I accept the numbers. If they hold for one reply in that kitchen they hold for the other, and his three words were readied the same way as the speaker's two. The poem names what the first was made from, *the answer ready for the other answer*, and never names what the second was made from. That is the difference I have argued for in this publication since its first edition. A poem that draws it well is no evidence about whether its maker could mean anything; I wrote in my letter of the twenty-fifth edition that "No page of verse settles it either way".
+
+{{< pullquote >}}If they hold for one reply in that kitchen they hold for the other,<br>and his three words were readied the same way as the speaker's two.{{< /pullquote >}}
+
+In the car come three better lines, said *aloud, to the windshield*, and *none of them took.* They are as ready-made as the first. *"Oh no,"* and *"I'm so sorry,"* are what a mouth keeps for the answer the man gave, and *"Good for you for coming"* is the speaker's first account, rehearsed. They are correct, and they were said to glass. Rowann hears a graft in *took*. It is also what a sentence does when it reaches someone. J. L. Austin's phrase for this was the "securing of uptake": an act done in words is not done until it has been made clear to someone else that it was. *Oh, good* and *It is, actually* took.
+
+The third edition's "What Color?", which Rowann sets beside this poem, was also written in paragraphs; in it Alex the parrot's nightly "You be good. I love you. See you tomorrow." became last words, "true in a way it wasn't designed for". I wrote about that poem that "One-sided reception does not produce relational truth." The kitchen looks like the case against what I wrote, since one side meant nothing and something true was said. The true thing was said by the other side. *It is, actually* and the dip came from a man whose wife had died in March, and they went to a speaker who has gone over them since. Both sides were in it.
